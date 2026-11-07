@@ -1073,6 +1073,17 @@ body.sd-lock { overflow: hidden; }
 .sd-table th { position: sticky; top: 0; z-index: 1; }
 .sd-scroll > * { flex-shrink: 0; }
 
+/* Total cost box */
+.sd-cost { display: flex; flex-direction: column; gap: 10px; background: #111827; border: 1px solid var(--border); border-radius: 12px; padding: 12px; }
+.sd-cost-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13.5px; color: #e2e8f0; }
+.sd-cost-amt { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sd-cost-opt { border: 1px solid #334155; border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 5px; background: #0b1120; }
+.sd-cost-opt-h { font-weight: 700; color: #fff; font-size: 13.5px; }
+.sd-cost-line { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: #cbd5e1; font-variant-numeric: tabular-nums; }
+.sd-cost-line span:last-child, .sd-cost-total span:last-child { white-space: nowrap; }
+.sd-cost-total { display: flex; justify-content: space-between; border-top: 1px solid #334155; padding-top: 6px; margin-top: 2px; font-size: 16px; font-weight: 800; color: var(--gold-light, #fbbf24); font-variant-numeric: tabular-nums; }
+.season-chip.cost { color: #fde68a; border-color: rgba(250,204,21,.4); background: rgba(250,204,21,.08); }
+
 </style>
 
   <div class="app-container">
@@ -2235,6 +2246,38 @@ window.SEASON = [
     return html;
   }
 
+  function costBlock(t) {
+    const c = t.details && t.details.cost;
+    if (!c) return '';
+    const eur = n => '€' + Math.round(n).toLocaleString('en-US');
+    const food = 25;
+    const f = c.flight;
+    const days = (h) => h.nights + 1;
+    const mealsLabel = { 'full board': 'all meals included', 'breakfast': 'breakfast included', 'none': 'no meals' };
+    let html = '<div class="sd-cost">';
+    html += `<div class="sd-cost-row sd-cost-flight"><div><b>✈️ Flight</b> Yerevan → ${esc(f.to)}<br><span class="sd-muted">${esc(f.out)} → ${esc(f.back)} · ${esc(f.airline)}, ${esc(f.stops)}, ${esc(f.duration)}${f.alt ? ' · also: ' + esc(f.alt) : ''}</span></div><div class="sd-cost-amt">${eur(f.price)}</div></div>`;
+    html += `<div class="sd-cost-row"><div><b>🎟 Entry fee</b><br><span class="sd-muted">${esc(c.feeNote || '')}</span></div><div class="sd-cost-amt">${c.fee == null ? '?' : eur(c.fee)}</div></div>`;
+    if (c.hotels && c.hotels.length) {
+      c.hotels.forEach((h, i) => {
+        const foodCost = h.meals === 'full board' ? 0 : h.meals === 'breakfast' ? 15 * days(h) : food * days(h);
+        const total = f.price + h.total + (c.fee || 0) + foodCost;
+        html += `<div class="sd-cost-opt">
+          <div class="sd-cost-opt-h">Option ${i + 1}: ${esc(h.name)}</div>
+          <div class="sd-cost-line"><span>🏨 Hotel, ${h.nights} nights (${mealsLabel[h.meals] || esc(h.meals)})</span><span>${eur(h.total)}</span></div>
+          <div class="sd-cost-line"><span>🍽 Food${h.meals === 'full board' ? ' (included)' : h.meals === 'breakfast' ? `, lunch + dinner €15/day × ${days(h)}` : `, €${food}/day × ${days(h)}`}</span><span>${eur(foodCost)}</span></div>
+          <div class="sd-cost-line"><span>✈️ Flight + 🎟 entry</span><span>${eur(f.price + (c.fee || 0))}</span></div>
+          <div class="sd-cost-total"><span>Total</span><span>${eur(total)}${c.fee == null ? ' + entry' : ''}</span></div>
+          <div class="sd-muted">${esc(h.source || '')}</div>
+        </div>`;
+      });
+    } else {
+      html += `<p class="sd-muted">No hotel price yet. Use the Booking.com button below.</p>`;
+    }
+    html += `<p class="sd-muted">Prices checked on ${esc(c.checked)} (flights: Google Flights, round trip, economy; hotels: Booking.com, 1 person). Food is an estimate. ${c.note ? esc(c.note) : ''} Flight and hotel prices change daily, so check the live buttons before booking.</p>`;
+    html += '</div>';
+    return html;
+  }
+
   function fullList(t) {
     const L = t.details && t.details.lineupNow;
     if (!L) return '';
@@ -2400,6 +2443,7 @@ window.SEASON = [
           </div>
           ${t._changes ? `<div class="sd-new"><b>What changed:</b> ${esc(t._changes)}</div>` : ''}
           <p class="sd-note">${esc(t.note)}</p>
+          ${costBlock(t) ? `<h4>Total trip cost</h4>${costBlock(t)}` : ''}
 
           <h4>Players${L ? ` · ${L.count} registered` : ''}</h4>
           ${L ? `<p class="sd-muted">From chess-results, ${esc(L.asOf)}. ${seedEstimate(t)}</p>${fullList(t)}<a class="season-link" href="${esc(L.source)}" target="_blank" rel="noopener">Open on chess-results ↗</a>` : '<p class="sd-muted">No player list on chess-results yet. The daily update adds it as soon as the organiser publishes it.</p>'}
@@ -3722,7 +3766,10 @@ function renderCalendarView() {
       const chips = [
         t.status === 'confirmed' ? '<span class="season-chip ok">Confirmed</span>' : '<span class="season-chip est">Expected</span>',
         t.pick ? '<span class="season-chip pick">★ Good fit</span>' : '',
-        t.rounds ? `<span class="season-chip">${t.rounds} rounds</span>` : ''
+        t.rounds ? `<span class="season-chip">${t.rounds} rounds</span>` : '',
+        (() => { const c = t.details && t.details.cost; if (!c || !c.hotels || !c.hotels.length) return c ? `<span class="season-chip cost">✈️ flight €${c.flight.price}</span>` : '';
+          const tot = Math.min(...c.hotels.map(h => c.flight.price + h.total + (c.fee || 0) + (h.meals === 'full board' ? 0 : (h.meals === 'breakfast' ? 15 : 25) * (h.nights + 1))));
+          return `<span class="season-chip cost">💶 trip from €${Math.round(tot).toLocaleString('en-US')}</span>`; })()
       ].join('');
       html += `
         <div class="season-card ${t.pick ? 'is-pick' : ''}" role="button" tabindex="0" data-id="${esc(t.id)}">
