@@ -1084,6 +1084,16 @@ body.sd-lock { overflow: hidden; }
 .sd-cost-total { display: flex; justify-content: space-between; border-top: 1px solid #334155; padding-top: 6px; margin-top: 2px; font-size: 16px; font-weight: 800; color: var(--gold-light, #fbbf24); font-variant-numeric: tabular-nums; }
 .season-chip.cost { color: #fde68a; border-color: rgba(250,204,21,.4); background: rgba(250,204,21,.08); }
 
+/* Simple tabs on the tournament screen */
+.sd-tabs { display: flex; gap: 6px; padding: 10px 14px 0; border-bottom: 1px solid var(--border); }
+.sd-tab { flex: 1; font: inherit; font-size: 13.5px; font-weight: 700; padding: 10px 6px; border: 0; border-bottom: 3px solid transparent; background: none; color: #94a3b8; cursor: pointer; }
+.sd-tab.on { color: #fff; border-bottom-color: var(--gold, #f59e0b); }
+.sd-pane { display: flex; flex-direction: column; gap: 10px; }
+.sd-pane[hidden] { display: none !important; }
+.season-card .season-chips { margin-top: 2px; }
+.season-intro { margin-bottom: 4px; }
+#view-calendar .radar-card-header, #view-calendar .radar-card > h2, #view-calendar .radar-card > .radar-card-header { display: none; }
+
 </style>
 
   <div class="app-container">
@@ -2083,6 +2093,8 @@ window.SEASON = [
     note: 'More than €25,000 in prizes. Venue: Hotel Sunway Playa Golf. The number of rounds is not on the main page; recent editions had 10.', url: 'https://sunwaychessfestival.com/' },
   { id: "groningen-2026", details: {"airport": "AMS", "airportCity": "Amsterdam (then about 2.5 h by train)", "venue": "Sportcentrum RUG & Hanze, Blauwborgje 16, Groningen", "schedule": "R1 Sat 19 Dec 15:00 · R9 Thu 24 Dec 10:00 · prize-giving about 15:00. Double rounds on some days.", "fee": "€100 (€90 if you registered before 31 Oct). Free for GMs, IMs and WGMs.", "lastYear": {"edition": "2025 (10 days, 9 rounds)", "players": 63, "gm": 6, "im": 12, "winner": "IM Elias Ruzhansky (BEL, 2432), 7/9 unbeaten", "top": [["IM", "Elias Ruzhansky", "BEL", 2432, "7"], ["GM", "Valery Kazakouski", "LTU", 2585, "6.5"], ["GM", "Vignesh N R", "IND", 2488, "6.5"], ["FM", "Mykola Korchynskyi", "GER", 2418, "6.5"]], "source": "https://chessbase.in/news/Elias-Ruzhansky-clear-first-at-Groningen-Chess-Festival-Open-2025-Vignesh-N-R-shares-second-place"}, "sources": ["https://chessfestival.nl/en/information/"]}, month: '2026-12', name: '62nd Groningen Chess Festival (Open A)', city: 'Groningen', country: 'Netherlands', start: '2026-12-19', end: '2026-12-24', rounds: 9, tc: '90 min + 30 s', fee: '€100 (Open A, for players rated over 2100)', status: 'confirmed', pick: true,
     note: '9 rounds in 6 days, so there are double-round days. Venue: Sportcentrum RUG & Hanze.', url: 'https://chessfestival.nl/en/information/' },
+  { id: 'montdemarsan-2026', details: {"airport":"BOD","airportCity":"Bordeaux","venue":"Mont-de-Marsan (Landes)"}, month: '2026-12', name: '23rd Christmas International Open', city: 'Mont-de-Marsan', country: 'France', start: '2026-12-26', end: '2026-12-30', rounds: null, status: 'confirmed',
+    note: 'French Christmas open in the Landes. Only 5 days, so check the number of rounds before planning a norm.', url: 'https://www.guide-des-landes.com/fr/agenda/evenements-sportifs/mont-de-marsan-189/23eme-open-international-d-echecs-de-noel-169277.html' },
   { id: "rilton-2026", details: {"airport": "ARN", "airportCity": "Stockholm", "venue": "Scandic Continental, Vasagatan 22, Stockholm (2025/26 venue)", "schedule": "27 Dec – 5 Jan, 9 rounds. 1 January is a rest day.", "tc": "40/90 min + 30 min + 30 s", "fee": "1,000 SEK for an FM, 900 SEK if you pay by 1 Dec (2025/26 terms). Minimum rating 2200.", "prize": "1st prize 30,000 SEK (2025/26).", "hotels": [{"name": "Scandic Continental (venue), breakfast incl., code from invitation", "price": 965, "currency": "SEK", "unit": "single standard / night", "note": "Single cabin room 800 SEK. These are 2025/26 prices; check the 2026/27 invitation."}], "lastYear": {"edition": "2024/25 (52nd)", "players": 115, "winner": "GM Bassem Amin (EGY), 7.5/9", "top": [["GM", "Bassem Amin", "EGY", null, "7.5"], ["GM", "Bartłomiej Heberla", "POL", null, "7"], ["IM", "Edvin Trost", "SWE", null, "7"], ["IM", "Leonardo Costa", "GER", 2498, "6.5"], ["GM", "Leon Livaic", "CRO", 2560, "6.5"], ["IM", "Ilamparthi A R", "IND", 2461, "6.5"], ["FM", "Bogdan Bilovil", "", 2452, "6.5"]], "source": "https://en.chessbase.com/newsroom/post/bassem-amin-wins-rilton-cup-2025?page=0"}, "sources": ["https://schack.se/wp-content/uploads/2025/09/Invitation_Rilton_Cup_2025_2026.pdf"]}, month: '2026-12', name: '54th Rilton Cup', city: 'Stockholm', country: 'Sweden', start: '2026-12-27', end: '2027-01-05', rounds: null, status: 'confirmed',
     note: 'A classic strong Christmas open. 1 January is a rest day.', url: 'https://chess-results.com/tnr1475608.aspx' },
   { id: "hastings-2026", details: {"airport": "LGW", "airportCity": "London Gatwick", "schedule": "R1 28 Dec (afternoon) · R9 5 Jan (morning).", "lastYear": {"edition": "2025/26 (99th)", "players": 112, "winner": "GM Alexander Kovchan (UKR) and IM Alex Golding (ENG), 7/9", "top": [["GM", "Alexander Kovchan", "UKR", 2447, "7"], ["IM", "Alex Golding", "ENG", 2370, "7"], ["IM", "Marius Deuer", "GER", 2475, "6.5"], ["IM", "Bennet Hagner", "GER", 2451, "6.5"], ["IM", "Samuel-Timotei Ghimpu", "ROU", 2428, "6.5"], ["GM", "Pierre Laurent-Paoli", "FRA", 2539, "6"], ["IM", "Tor Fredrik Kaasen", "NOR", 2471, "6"]], "source": "https://en.chessbase.com/newsroom/post/hastings-congress-2026-report?page=0"}, "sources": ["https://hastingschess.com/congress-overview/"]}, month: '2026-12', name: '100th Hastings Masters', city: 'Hastings', country: 'England', start: '2026-12-28', end: '2027-01-05', rounds: 9, tc: '40/90 min + 30 min + 30 s', status: 'confirmed',
@@ -2103,6 +2115,8 @@ window.SEASON = [
     note: 'Strong field: Open A 2026 had 132 players with an average rating of 2309, right at your level.', url: 'https://www.365chess.com/tournaments/graz_open_a_2026_2026/47610' },
   { id: "prague-festival-2027", details: {"airport": "PRG", "airportCity": "Prague", "hotels": [{"name": "Hotel Don Giovanni Prague (festival hotel)", "price": null, "unit": "", "note": "Price not published yet."}]}, month: '2027-02', name: '9th Prague International Chess Festival', city: 'Prague', country: 'Czech Republic', start: '2027-02-16', end: '2027-02-26', rounds: null, status: 'confirmed',
     note: 'Festival with Masters/Challengers plus open sections. Check the main Open section dates on the site; the "Open 28+" section is only 5 rounds.', url: 'https://praguechessfestival.com/en/2027/clanek?id=609&idmenu=380' },
+  { id: 'cannes-2027', details: {"airport":"NCE","airportCity":"Nice (then 30 min by train to Cannes)","venue":"Palais des Festivals, Salon des Ambassadeurs, Cannes","schedule":"Check-in 22 Feb 12:00–14:30, R1 22 Feb 16:30, prize-giving 28 Feb 16:30.","fee":"€85 (€75 before 22 Jan 2027). Free for GMs and IMs. Online only (HelloAsso).","prize":"€10,000 total. Group A 1st prize €1,800, 2nd €1,200.","sources":["https://www.cannes-echecs.fr/FIJ-2027-Le-programme-complet_a309.html"]}, month: '2027-02', name: 'Cannes International Open (Group A)', city: 'Cannes', country: 'France', start: '2027-02-22', end: '2027-02-28', rounds: 9, tc: '90/40 + 30 min + 30 s', status: 'confirmed', pick: true,
+    note: 'Group A is for players rated 2200+, with IM and GM norms possible. One week, 9 rounds, on the Riviera.', url: 'https://www.cannes-echecs.fr/FIJ-2027-Le-programme-complet_a309.html' },
   { id: "cappelle-2027", details: {"airport": "BRU", "airportCity": "Brussels or Lille", "venue": "Palais des Arts et Loisirs, Cappelle-la-Grande", "lastYear": {"edition": "2026 (42nd)", "players": 565, "nations": 24, "winner": "", "top": [], "source": "https://chessbase.in/news/42nd-cappelle-la-grande-2026-final-report"}}, month: '2027-02', name: '43rd Cappelle-la-Grande Open', city: 'Cappelle-la-Grande', country: 'France', start: '2027-02-27', end: '2027-03-05', rounds: 9, status: 'confirmed',
     note: 'Huge open: 565 players in 2026. Dates are from the official 2027 poster.', url: 'https://chessbase.in/news/42nd-cappelle-la-grande-2026-final-report' },
 
@@ -2117,6 +2131,8 @@ window.SEASON = [
     note: 'More than €70,000 in prizes. Played at the MarSenses Paradise Club and Hotel Sagitario Princesa Playa.', url: 'https://openchessmenorca.com/?lang=en' },
 
   // ---------------- APRIL 2027 ----------------
+  { id: 'malakoff-2027', details: {"airport":"CDG","airportCity":"Paris (Metro 13 to Malakoff)","venue":"Gymnase Marcel Cerdan, 37 rue Avaulée, Malakoff (Paris)","schedule":"R1–R8 at 14:00, R9 Sun 18 Apr at 10:00. One round per day.","fee":"€50 for FMs (adults €70). Free for GMs and IMs. Online registration closes 9 Apr 2027 (max 400 players).","prize":"1st prize €1,500 + trophy.","sources":["https://malakoffetmat.fr/tournoi.htm"]}, month: '2027-04', name: '23rd Malakoff International Open (Paris)', city: 'Malakoff (Paris)', country: 'France', start: '2027-04-10', end: '2027-04-18', rounds: 9, tc: '90/40 + 30 min + 30 s', status: 'confirmed', pick: true,
+    note: 'Big Paris open with GMs, one round per day (no double rounds). FM entry is only €50.', url: 'https://malakoffetmat.fr/tournoi.htm' },
   { id: "jersey-2027", details: {"airport": "JER", "airportCity": "Jersey (via London)"}, month: '2027-04', name: 'Jersey International', city: 'St Clement Bay', country: 'Jersey (UK)', start: '2027-04-03', end: '2027-04-10', rounds: null, status: 'confirmed',
     note: 'Norm chances possible. Needs a UK visa.', url: 'https://theweekinchess.com/chess-calendar' },
   { id: "fagernes-easter-2027", details: {"airport": "OSL", "airportCity": "Oslo (then bus to Fagernes)"}, month: '2027-04', name: 'Fagernes Chess International (GM group)', city: 'Fagernes', country: 'Norway', start: '2027-04-01', end: '2027-04-05', rounds: 9, status: 'expected', approx: true,
@@ -2153,6 +2169,10 @@ window.SEASON = [
     note: 'No well-known European classical open has published September 2027 dates yet. Check again in spring 2027.', url: '' },
 
   // ---------------- OCTOBER 2027 ----------------
+  { id: 'menton-2027', details: {"airport":"NCE","airportCity":"Nice (then 30 min by train to Menton)"}, month: '2027-10', name: 'Menton International Open', city: 'Menton', country: 'France', start: '2027-10-17', end: '2027-10-24', rounds: null, status: 'expected', approx: true,
+    note: 'Held every October on the Riviera. 2026 edition: 18–25 October.', url: 'https://cotedazurfrance.com/offers/23e-edition-de-lopen-international-dechecs-menton-en-6770947/' },
+  { id: 'capdagde-2027', details: {"airport":"MPL","airportCity":"Montpellier (or Béziers)","fee":"Grand Prix: €94 (€75 early). 2026 prices.","prize":"Grand Prix prizes €13,200 (2026)."}, month: '2027-10', name: "Cap d'Agde Opens (Grand Prix)", city: "Cap d'Agde", country: 'France', start: '2027-10-23', end: '2027-10-30', rounds: 9, tc: '90 min + 30 s', status: 'expected', approx: true,
+    note: '2026 edition: 24–31 October, 9 rounds. 2027 dates not announced yet.', url: 'https://www.capechecs.com/opens/opens_classiques.php' },
   { id: "fagernes-autumn-2027", details: {"airport": "OSL", "airportCity": "Oslo (then bus to Fagernes)"}, month: '2027-10', name: 'Fagernes International Autumn (Open)', city: 'Fagernes', country: 'Norway', start: '2027-10-15', end: '2027-10-24', rounds: 10, status: 'expected', approx: true,
     note: 'A 10-round open, held every October.', url: 'https://en.chessbase.com/post/upcoming-tournaments-and-events-4' },
   { id: "tsaghkadzor-2027", details: {"airport": "", "airportCity": "No flight needed"}, month: '2027-10', name: 'Tsaghkadzor Open (Group A)', city: 'Tsaghkadzor', country: 'Armenia', start: '2027-10-23', end: '2027-10-29', rounds: 9, status: 'expected',
@@ -2347,14 +2367,13 @@ window.SEASON = [
       <div class="sd-btns">
         <a class="sd-btn primary" href="${g(out, back2)}" target="_blank" rel="noopener">Google Flights ↗</a>
         <a class="sd-btn" href="${sky(out, back2)}" target="_blank" rel="noopener">Skyscanner ↗</a>
-        <a class="sd-btn" href="${kayak(out, back2)}" target="_blank" rel="noopener">Kayak ↗</a>
         <a class="sd-btn" href="${g(out, back1)}" target="_blank" rel="noopener">Night flight back ↗</a>
       </div>`;
   }
 
   function hotelBlock(t) {
     const d = t.details || {};
-    const hs = d.hotels || [];
+    const hs = (d.cost && d.cost.hotels && d.cost.hotels.length) ? [] : (d.hotels || []);
     const nights = t.approx ? null : Math.round((new Date(t.end) - new Date(t.start)) / 864e5) + 1;
     let html = '';
     hs.forEach(h => {
@@ -2424,6 +2443,7 @@ window.SEASON = [
     sheet.dataset.id = id;
     const dates = t.approx ? 'Dates not announced (expected)' : `${nice(t.start)} – ${nice(t.end)}`;
     const L = d.lineupNow, Y = d.lastYear;
+    const tab = (keepScroll && sheet && sheet.dataset.tab) || 'cost';
     const srcs = [].concat(t.url ? [t.url] : [], d.sources || []).filter((x, i, a) => x && a.indexOf(x) === i);
     sheet.innerHTML = `
       <div class="sd-panel">
@@ -2434,46 +2454,49 @@ window.SEASON = [
           </div>
           <button class="sd-close" aria-label="Close" onclick="closeSeasonDetail()">✕</button>
         </div>
+        <div class="sd-tabs" role="tablist">
+          <button class="sd-tab ${tab === 'cost' ? 'on' : ''}" data-tab="cost">💶 Cost</button>
+          <button class="sd-tab ${tab === 'players' ? 'on' : ''}" data-tab="players">♟ Players${L ? ` (${L.count})` : ''}</button>
+          <button class="sd-tab ${tab === 'info' ? 'on' : ''}" data-tab="info">ℹ️ Info</button>
+        </div>
         <div class="sd-scroll">
-          <div class="season-chips">
-            ${t.status === 'confirmed' ? '<span class="season-chip ok">Dates confirmed</span>' : '<span class="season-chip est">Expected</span>'}
-            ${t.pick ? '<span class="season-chip pick">★ Good fit</span>' : ''}
-            ${t.rounds ? `<span class="season-chip">${t.rounds} rounds</span>` : ''}
-            ${t._updatedAt ? `<span class="season-chip">Updated ${esc(t._updatedAt)}</span>` : ''}
-          </div>
-          ${t._changes ? `<div class="sd-new"><b>What changed:</b> ${esc(t._changes)}</div>` : ''}
-          <p class="sd-note">${esc(t.note)}</p>
-          ${costBlock(t) ? `<h4>Total trip cost</h4>${costBlock(t)}` : ''}
+          ${t._changes ? `<div class="sd-new">🆕 ${esc(t._changes)}</div>` : ''}
 
-          <h4>Players${L ? ` · ${L.count} registered` : ''}</h4>
-          ${L ? `<p class="sd-muted">From chess-results, ${esc(L.asOf)}. ${seedEstimate(t)}</p>${fullList(t)}<a class="season-link" href="${esc(L.source)}" target="_blank" rel="noopener">Open on chess-results ↗</a>` : '<p class="sd-muted">No player list on chess-results yet. The daily update adds it as soon as the organiser publishes it.</p>'}
+          <section class="sd-pane" data-pane="cost" ${tab === 'cost' ? '' : 'hidden'}>
+            ${costBlock(t) || '<p class="sd-muted">No prices checked yet for this tournament.</p>'}
+            <h4>Live prices</h4>
+            ${flightBlock(t)}
+            ${hotelBlock(t)}
+          </section>
 
-          <h4>This year vs last year</h4>
-          ${compareBlock(t)}
-          ${Y ? `<h5>Last year: ${esc(Y.edition)}</h5>${Y.winner ? `<p class="sd-muted">Winner: ${esc(Y.winner)}</p>` : ''}${playerTable(Y.top, true)}${Y.source ? `<a class="season-link" href="${esc(Y.source)}" target="_blank" rel="noopener">Last year on chess-results ↗</a>` : ''}` : ''}
+          <section class="sd-pane" data-pane="players" ${tab === 'players' ? '' : 'hidden'}>
+            ${L ? `<p class="sd-muted">${L.count} players on chess-results (${esc(L.asOf)}). ${seedEstimate(t)}</p>${fullList(t)}<a class="season-link" href="${esc(L.source)}" target="_blank" rel="noopener">Open on chess-results ↗</a>` : '<p class="sd-muted">No player list on chess-results yet. The daily update adds it when it appears.</p>'}
+            ${(L || Y) ? `<h4>This year vs last year</h4>${compareBlock(t)}` : ''}
+            ${Y ? `<h5>Last year: ${esc(Y.edition)}</h5>${Y.winner ? `<p class="sd-muted">Winner: ${esc(Y.winner)}</p>` : ''}${playerTable(Y.top, true)}` : ''}
+          </section>
 
-          <h4>Tournament</h4>
-          <dl class="sd-dl">
-            ${d.venue ? `<dt>Venue</dt><dd>${esc(d.venue)}</dd>` : ''}
-            ${d.schedule ? `<dt>Schedule</dt><dd>${esc(d.schedule)}</dd>` : ''}
-            ${(t.tc || d.tc) ? `<dt>Time control</dt><dd>${esc(t.tc || d.tc)}</dd>` : ''}
-            <dt>Entry fee</dt><dd>${esc(t.fee || d.fee || 'Not published yet')}</dd>
-            ${d.prize ? `<dt>Prizes</dt><dd>${esc(d.prize)}</dd>` : ''}
-          </dl>
-
-
-          <h4>Flights from Armenia</h4>
-          ${flightBlock(t)}
-
-          <h4>Accommodation</h4>
-          ${hotelBlock(t)}
-
-          ${calcBlock(t) ? `<h4>Trip cost</h4>${calcBlock(t)}` : ''}
-
-          ${srcs.length ? `<h4>Sources</h4><ul class="sd-src">${srcs.map(u => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, '').slice(0, 60))}</a></li>`).join('')}</ul>` : ''}
+          <section class="sd-pane" data-pane="info" ${tab === 'info' ? '' : 'hidden'}>
+            <p class="sd-note">${esc(t.note)}</p>
+            <dl class="sd-dl">
+              <dt>Status</dt><dd>${t.status === 'confirmed' ? 'Dates confirmed' : 'Expected (not announced yet)'}</dd>
+              ${t.rounds ? `<dt>Rounds</dt><dd>${t.rounds}</dd>` : ''}
+              ${d.venue ? `<dt>Venue</dt><dd>${esc(d.venue)}</dd>` : ''}
+              ${d.schedule ? `<dt>Schedule</dt><dd>${esc(d.schedule)}</dd>` : ''}
+              ${(t.tc || d.tc) ? `<dt>Time control</dt><dd>${esc(t.tc || d.tc)}</dd>` : ''}
+              <dt>Entry fee</dt><dd>${esc(t.fee || d.fee || 'Not published yet')}</dd>
+              ${d.prize ? `<dt>Prizes</dt><dd>${esc(d.prize)}</dd>` : ''}
+            </dl>
+            ${srcs.length ? `<h4>Sources</h4><ul class="sd-src">${srcs.map(u => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, '').slice(0, 60))}</a></li>`).join('')}</ul>` : ''}
+          </section>
         </div>
       </div>`;
-    wireCalc(t);
+    sheet.dataset.tab = tab;
+    sheet.querySelectorAll('.sd-tab').forEach(b => b.addEventListener('click', () => {
+      sheet.dataset.tab = b.dataset.tab;
+      sheet.querySelectorAll('.sd-tab').forEach(x => x.classList.toggle('on', x === b));
+      sheet.querySelectorAll('.sd-pane').forEach(p => { p.hidden = p.dataset.pane !== b.dataset.tab; });
+      sheet.querySelector('.sd-scroll').scrollTop = 0;
+    }));
     const sb = document.getElementById('sd-search');
     if (sb) sb.addEventListener('input', () => {
       const q = sb.value.trim().toLowerCase();
@@ -2576,7 +2599,7 @@ function switchView(viewName) {
     news: 'Tournament News Feed',
     analysis: 'Tournament Intelligence & Norm Analysis',
     travel: 'Travel Planner & Caucasus Hubs',
-    calendar: 'Season 2026–27',
+    calendar: 'Chess Radar',
     saved: 'Saved Tournaments & Campaign Planner',
     notifications: 'Radar Notification Center',
     ai: 'AI Tournament Assistant',
@@ -3736,18 +3759,12 @@ function renderCalendarView() {
 
   let html = `
     <div class="season-intro">
-      <p>Real classical tournaments, month by month. Tap one for players, flights, hotels and costs.</p>
-      <p class="season-status">${window.SEASON_STATUS && window.SEASON_STATUS.updatedAt ? `🔄 Last daily update: ${esc(window.SEASON_STATUS.updatedAt)}${window.SEASON_STATUS.summary ? ' · ' + esc(window.SEASON_STATUS.summary) : ''}` : `Checked against official sites on ${esc(window.SEASON_CHECKED)}.`}</p>
-      <div class="season-legend">
-        <span class="season-chip ok">Dates confirmed</span>
-        <span class="season-chip est">Expected: 2027 dates not announced yet</span>
-        <span class="season-chip pick">★ Good fit for you</span>
-      </div>
       <div class="season-filters" role="group" aria-label="Filter">
         <button class="season-filter ${filter === 'all' ? 'on' : ''}" data-f="all">All</button>
-        <button class="season-filter ${filter === 'confirmed' ? 'on' : ''}" data-f="confirmed">Confirmed only</button>
-        <button class="season-filter ${filter === 'pick' ? 'on' : ''}" data-f="pick">★ Best fits</button>
+        <button class="season-filter ${filter === 'pick' ? 'on' : ''}" data-f="pick">★ Best for me</button>
+        <button class="season-filter ${filter === 'confirmed' ? 'on' : ''}" data-f="confirmed">Confirmed</button>
       </div>
+      ${window.SEASON_STATUS && window.SEASON_STATUS.updatedAt ? `<p class="season-status">Updated ${esc(window.SEASON_STATUS.updatedAt)}</p>` : ''}
     </div>`;
 
   Object.keys(groups).sort().forEach(m => {
@@ -3764,8 +3781,8 @@ function renderCalendarView() {
       }
       const dates = t.approx ? 'Dates not announced' : `${fmt(t.start)} – ${fmt(t.end)}`;
       const chips = [
-        t.status === 'confirmed' ? '<span class="season-chip ok">Confirmed</span>' : '<span class="season-chip est">Expected</span>',
-        t.pick ? '<span class="season-chip pick">★ Good fit</span>' : '',
+        t.status === 'confirmed' ? '' : '<span class="season-chip est">Dates expected</span>',
+        t.pick ? '<span class="season-chip pick">★</span>' : '',
         t.rounds ? `<span class="season-chip">${t.rounds} rounds</span>` : '',
         (() => { const c = t.details && t.details.cost; if (!c || !c.hotels || !c.hotels.length) return c ? `<span class="season-chip cost">✈️ flight €${c.flight.price}</span>` : '';
           const tot = Math.min(...c.hotels.map(h => c.flight.price + h.total + (c.fee || 0) + (h.meals === 'full board' ? 0 : (h.meals === 'breakfast' ? 15 : 25) * (h.nights + 1))));
@@ -3778,11 +3795,6 @@ function renderCalendarView() {
             <div class="season-name">${esc(t.name)}</div>
             <div class="season-meta">📍 ${esc(t.city)}, ${esc(t.country)} · ${dates}</div>
             <div class="season-chips">${chips}</div>
-            ${t.tc ? `<div class="season-meta">⏱ ${esc(t.tc)}</div>` : ''}
-            ${t.fee ? `<div class="season-meta">💶 ${esc(t.fee)}</div>` : ''}
-            <div class="season-note">${esc(t.note)}</div>
-            ${t._changes ? `<div class="season-new">🆕 ${esc(t._changes)}</div>` : ''}
-            <span class="season-open">All details: players, flights, hotels →</span>
           </div>
         </div>`;
     });
