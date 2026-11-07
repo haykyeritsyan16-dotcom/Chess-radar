@@ -1067,6 +1067,12 @@ body.sd-lock { overflow: hidden; }
 .sidebar, .topbar-right, .data-warning { display: none !important; }
 .content-area { padding-bottom: calc(24px + env(safe-area-inset-bottom)) !important; }
 
+.sd-search { font: inherit; font-size: 16px; width: 100%; box-sizing: border-box; padding: 9px 12px; border-radius: 8px; border: 1px solid #334155; background: #0b1120; color: #fff; }
+#sd-players { font-size: 12.5px; }
+.sd-table-wrap { max-height: 60vh; overflow-y: auto; }
+.sd-table th { position: sticky; top: 0; z-index: 1; }
+.sd-scroll > * { flex-shrink: 0; }
+
 </style>
 
   <div class="app-container">
@@ -2229,7 +2235,35 @@ window.SEASON = [
     return html;
   }
 
+  function fullList(t) {
+    const L = t.details && t.details.lineupNow;
+    if (!L) return '';
+    const all = L.all && L.all.length ? L.all : (L.top || []).map((p, i) => [i + 1, p[0], p[1], p[2], p[3]]);
+    const me = myRating();
+    const rows = all.slice().sort((a, b) => (a[0] || 999) - (b[0] || 999));
+    let html = `<input id="sd-search" class="sd-search" type="search" placeholder="Search player, title or federation" aria-label="Search players">`;
+    html += '<div class="sd-table-wrap"><table class="sd-table" id="sd-players"><thead><tr><th>#</th><th>Player</th><th>Fed</th><th>Rating</th></tr></thead><tbody>';
+    let meShown = false;
+    rows.forEach(r => {
+      const [no, title, name, fed, rating] = r;
+      if (!meShown && rating && rating < me) {
+        html += `<tr class="sd-me"><td>→</td><td>You (FM Hayk Yeritsyan)</td><td>ARM</td><td>${me}</td></tr>`;
+        meShown = true;
+      }
+      html += `<tr data-q="${esc((title + ' ' + name + ' ' + fed).toLowerCase())}"><td>${no || ''}</td><td>${title ? `<span class="sd-title t-${esc(title.toLowerCase())}">${esc(title)}</span> ` : ''}${esc(name)}</td><td>${esc(fed)}</td><td>${rating || '–'}</td></tr>`;
+    });
+    if (!meShown) html += `<tr class="sd-me"><td>→</td><td>You (FM Hayk Yeritsyan)</td><td>ARM</td><td>${me}</td></tr>`;
+    html += '</tbody></table></div>';
+    if (!(L.all && L.all.length) && L.count > (L.top || []).length) html += `<p class="sd-muted">Showing the ${L.top.length} highest rated of ${L.count}.</p>`;
+    return html;
+  }
+
   function seedEstimate(t) {
+    const L0 = t.details && t.details.lineupNow;
+    if (L0 && L0.all && L0.all.length) {
+      const above = L0.all.filter(p => p[4] > myRating()).length;
+      return `You would be about seed <b>${above + 1}</b> of ${L0.count + 1}.`;
+    }
     const L = t.details && t.details.lineupNow;
     if (!L || !L.top || !L.top.length) return '';
     const me = myRating();
@@ -2367,6 +2401,13 @@ window.SEASON = [
           ${t._changes ? `<div class="sd-new"><b>What changed:</b> ${esc(t._changes)}</div>` : ''}
           <p class="sd-note">${esc(t.note)}</p>
 
+          <h4>Players${L ? ` · ${L.count} registered` : ''}</h4>
+          ${L ? `<p class="sd-muted">From chess-results, ${esc(L.asOf)}. ${seedEstimate(t)}</p>${fullList(t)}<a class="season-link" href="${esc(L.source)}" target="_blank" rel="noopener">Open on chess-results ↗</a>` : '<p class="sd-muted">No player list on chess-results yet. The daily update adds it as soon as the organiser publishes it.</p>'}
+
+          <h4>This year vs last year</h4>
+          ${compareBlock(t)}
+          ${Y ? `<h5>Last year: ${esc(Y.edition)}</h5>${Y.winner ? `<p class="sd-muted">Winner: ${esc(Y.winner)}</p>` : ''}${playerTable(Y.top, true)}${Y.source ? `<a class="season-link" href="${esc(Y.source)}" target="_blank" rel="noopener">Last year on chess-results ↗</a>` : ''}` : ''}
+
           <h4>Tournament</h4>
           <dl class="sd-dl">
             ${d.venue ? `<dt>Venue</dt><dd>${esc(d.venue)}</dd>` : ''}
@@ -2376,10 +2417,6 @@ window.SEASON = [
             ${d.prize ? `<dt>Prizes</dt><dd>${esc(d.prize)}</dd>` : ''}
           </dl>
 
-          <h4>Players: this year vs last year</h4>
-          ${compareBlock(t)}
-          ${L ? `<p class="sd-muted">Registered players as of ${esc(L.asOf)}. ${seedEstimate(t)}</p>${playerTable(L.top, false)}<a class="season-link" href="${esc(L.source)}" target="_blank" rel="noopener">Full list ↗</a>` : ''}
-          ${Y ? `<h5>Last year: ${esc(Y.edition)}</h5>${Y.winner ? `<p class="sd-muted">Winner: ${esc(Y.winner)}</p>` : ''}${playerTable(Y.top, true)}${Y.source ? `<a class="season-link" href="${esc(Y.source)}" target="_blank" rel="noopener">Last year's report ↗</a>` : ''}` : ''}
 
           <h4>Flights from Armenia</h4>
           ${flightBlock(t)}
@@ -2393,6 +2430,11 @@ window.SEASON = [
         </div>
       </div>`;
     wireCalc(t);
+    const sb = document.getElementById('sd-search');
+    if (sb) sb.addEventListener('input', () => {
+      const q = sb.value.trim().toLowerCase();
+      document.querySelectorAll('#sd-players tbody tr[data-q]').forEach(tr => { tr.hidden = q && !tr.dataset.q.includes(q); });
+    });
     if (keepScroll) sheet.querySelector('.sd-scroll').scrollTop = prevScroll;
     document.body.classList.add('sd-lock');
   };
