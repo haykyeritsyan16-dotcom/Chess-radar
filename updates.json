@@ -1,7 +1,175 @@
 {
-  "status": {
-    "updatedAt": "7 Nov 2026, 21:45",
-    "summary": "Website launched. Daily updates start tomorrow morning."
+ "status": {
+  "updatedAt": "7 Nov 2026, 22:05",
+  "summary": "Fees, prizes and hotels added for Sitges, Hastings, Graz, Cappelle, Vardaris, Sligo, Prague Open and Jersey. Bled: rating limit 2300."
+ },
+ "tournaments": {
+  "sitges-2026": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "Entry fee and prize list added: €89, or free with a 10-night hotel stay. 1st prize €5,000.",
+   "fields": {
+    "fee": "€89. Free if you stay 10+ nights at the official hotel or Sunway apartments. Free for GMs and players rated 2450+."
+   },
+   "details": {
+    "prize": "Group A prize fund €23,750, 1st prize €5,000 + trophy. Rating prize 2300–2449: €300 / €225 / €150 (not added to main prizes).",
+    "hotels": [
+     {
+      "name": "Hotel Sunway Playa Golf / Sunway apartments (official)",
+      "price": null,
+      "unit": "",
+      "note": "Prices are not public; book via the organiser (info@sunwaychessfestival.com, +34 93 811 34 10). Staying 10+ nights makes the entry free."
+     }
+    ],
+    "sources": [
+     "https://www.sunwaychessfestival.com/en/sitges/registration-fees?idioma=en",
+     "https://sunwaychessfestival.com/en/sitges/awards/open-r-group-a-prizes_5",
+     "https://sunwaychessfestival.com/"
+    ]
+   }
   },
-  "tournaments": {}
+  "hastings-2026": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "Venue, prize fund and round times added (from the 2025/26 edition).",
+   "fields": {
+    "fee": "Free for GMs/IMs. FM fee is not published; ask HICCchairman@yahoo.com."
+   },
+   "details": {
+    "venue": "Horntye Park Sports Complex, Bohemia Road, Hastings (2025/26)",
+    "prize": "£10,000 total, 1st prize £2,500 (2025/26).",
+    "schedule": "2025/26 pattern: R1 28 Dec 15:00 · double rounds on 29 Dec, 30 Dec and 1 Jan · last round in the morning. 2026/27: R1 28 Dec, R9 5 Jan.",
+    "sources": [
+     "https://hastingschess.com/masters/",
+     "https://hastingschess.com/congress-overview/"
+    ]
+   }
+  },
+  "graz-2027": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "Entry fee and prize fund added (from previous edition).",
+   "fields": {
+    "fee": "Open A: €75 (2024 rate), +€15 if you pay late. Free only for GMs and IMs."
+   },
+   "details": {
+    "prize": "€8,500 total, Open A 1st prize €1,500 (2024).",
+    "tc": "90 min + 30 s",
+    "hotels": [
+     {
+      "name": "Overnight packages via chessgraz.com",
+      "price": null,
+      "unit": "",
+      "note": "Prices not published in the regulations."
+     }
+    ],
+    "sources": [
+     "https://chess-results.com/Download/Kalender/2024_02_23_ChessOpen_2024_ger_eng.pdf",
+     "https://www.365chess.com/tournaments/graz_open_a_2026_2026/47610"
+    ]
+   }
+  },
+  "cappelle-2027": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "Entry fee, prize fund and schedule added (from 2025 rules).",
+   "fields": {
+    "fee": "€50 (€60 if you pay late). Free only for GMs, IMs, WGMs and WIMs (2025 rules).",
+    "tc": "90 min/40 + 30 min, +30 s per move"
+   },
+   "details": {
+    "prize": "€12,000 total (2025).",
+    "schedule": "2025 pattern: R1 Saturday 16:00, last round Friday 10:00. Register on site before 12:00 on day 1.",
+    "venue": "Palais des Arts et des Loisirs, Place Bernard Gouvart, Cappelle-la-Grande. Free DK'Bus shuttles from Dunkirk.",
+    "hotels": [
+     {
+      "name": "Hotels in Dunkirk (tourist office)",
+      "price": null,
+      "unit": "",
+      "note": "The organiser lists no hotel offer; free buses run from Dunkirk."
+     }
+    ],
+    "sources": [
+     "https://www.cappelle-chess.fr/files/SAOSKARtIIulbM4DsNK4UlRPZuxDLQSMPMAgf48y.pdf"
+    ]
+   }
+  },
+  "vardaris-2027": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "Format found: 7 rounds, and players rated 2300+ play free.",
+   "fields": {
+    "rounds": 7,
+    "fee": "Open A: free for titled players and players rated 2300+ (2025 rules).",
+    "tc": "90 min + 30 s",
+    "note": "Only 7 rounds, so it can't give a norm. 2025 venue: Holiday Inn Thessaloniki. Prize fund €4,350, 1st prize €1,000."
+   },
+   "details": {
+    "prize": "€4,350 total, Open A 1st prize €1,000 (2025).",
+    "venue": "Hotel Holiday Inn, 8 Monastiriou St, Thessaloniki (2025)",
+    "sources": [
+     "https://doc.fide.com/docs/CALENDAR/2025/8th_Vardaris_Regulations.pdf"
+    ]
+   }
+  },
+  "sligo-2027": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "2026 format found: the Masters was only 5 rounds.",
+   "fields": {
+    "note": "In 2026 the Masters was a 5-round weekend event (30 players, €65–85 entry, 1st prize €825) and there was also a separate 9-round Open. Check which section has 9 rounds in 2027."
+   },
+   "details": {
+    "lastYear": {
+     "edition": "2026 Masters",
+     "players": 30,
+     "winner": "",
+     "top": [],
+     "source": "https://www.irlchess.com/sligo-masters2026_allfiles/information_sligo-masters2026.html"
+    },
+    "sources": [
+     "https://www.irlchess.com/sligo-masters2026_allfiles/information_sligo-masters2026.html"
+    ]
+   }
+  },
+  "bled-2027": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "Warning: in 2026 the main tournament was only for players rated up to 2300.",
+   "fields": {
+    "pick": false,
+    "tc": "75 min + 15 min after move 40, +30 s per move",
+    "note": "In 2026 the main tournament was only for players rated up to 2300, so at 2306 you probably can't enter. Ask bled@sah-ljubljana.si before planning."
+   },
+   "details": {
+    "hotels": [
+     {
+      "name": "Hotel Park 4* (package: double room, full board, 6 nights)",
+      "price": 695,
+      "unit": "per person / package",
+      "note": "2026 package for groups of 6+ through federations."
+     }
+    ],
+    "sources": [
+     "https://schack.se/wp-content/uploads/2026/01/Bled-Chess-Festival-2026.pdf"
+    ]
+   }
+  },
+  "prague-open-2027": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "Organiser fee rules added (same organiser as Marienbad).",
+   "fields": {
+    "fee": "Not published yet. The same organiser (AVE Chess) charged an FM about €31–64 in the open and about €190–230 in an IM round robin at Marienbad/Pilsen."
+   },
+   "details": {
+    "sources": [
+     "https://ajedrezenmadrid.com/torneos/2027/27_marienbad.pdf",
+     "https://chessopen.ru/upload/iblock/fa5/x8xizt702lrqjb0ktg841p67ts47jh1h.pdf"
+    ]
+   }
+  },
+  "jersey-2027": {
+   "updatedAt": "7 Nov 2026",
+   "changes": "Venue added. GM and IM norms possible.",
+   "details": {
+    "venue": "Hotel Ambassadeur, St Clement Bay, Jersey (2025)",
+    "sources": [
+     "https://chesscircuit.substack.com/p/jersey-international-and-blitz"
+    ]
+   }
+  }
+ }
 }
