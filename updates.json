@@ -1,12 +1,12 @@
 {
  "status": {
-  "updatedAt": "7 Nov 2026, 22:05",
-  "summary": "Fees, prizes and hotels added for Sitges, Hastings, Graz, Cappelle, Vardaris, Sligo, Prague Open and Jersey. Bled: rating limit 2300."
+  "updatedAt": "7 Nov 2026, 22:30",
+  "summary": "All player lists now come from chess-results. Vardaris moved to 11–15 March."
  },
  "tournaments": {
   "sitges-2026": {
    "updatedAt": "7 Nov 2026",
-   "changes": "Entry fee and prize list added: €89, or free with a 10-night hotel stay. 1st prize €5,000.",
+   "changes": "Entry fee €89 (free with 10-night hotel stay). Player list not on chess-results yet.",
    "fields": {
     "fee": "€89. Free if you stay 10+ nights at the official hotel or Sunway apartments. Free for GMs and players rated 2450+."
    },
@@ -24,12 +24,13 @@
      "https://www.sunwaychessfestival.com/en/sitges/registration-fees?idioma=en",
      "https://sunwaychessfestival.com/en/sitges/awards/open-r-group-a-prizes_5",
      "https://sunwaychessfestival.com/"
-    ]
+    ],
+    "lastYear": null
    }
   },
   "hastings-2026": {
    "updatedAt": "7 Nov 2026",
-   "changes": "Venue, prize fund and round times added (from the 2025/26 edition).",
+   "changes": "Prize fund £10,000. Player list not on chess-results yet.",
    "fields": {
     "fee": "Free for GMs/IMs. FM fee is not published; ask HICCchairman@yahoo.com."
    },
@@ -40,12 +41,13 @@
     "sources": [
      "https://hastingschess.com/masters/",
      "https://hastingschess.com/congress-overview/"
-    ]
+    ],
+    "lastYear": null
    }
   },
   "graz-2027": {
    "updatedAt": "7 Nov 2026",
-   "changes": "Entry fee and prize fund added (from previous edition).",
+   "changes": "Real list from chess-results: 39 players, 5 GMs. Venue: Novapark Hotel.",
    "fields": {
     "fee": "Open A: €75 (2024 rate), +€15 if you pay late. Free only for GMs and IMs."
    },
@@ -61,9 +63,254 @@
      }
     ],
     "sources": [
+     "https://chess-results.com/tnr1482880.aspx?lan=1",
+     "https://chess-results.com/tnr1226434.aspx?lan=1",
      "https://chess-results.com/Download/Kalender/2024_02_23_ChessOpen_2024_ger_eng.pdf",
      "https://www.365chess.com/tournaments/graz_open_a_2026_2026/47610"
-    ]
+    ],
+    "venue": "Novapark Hotel, Graz",
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 39,
+     "gm": 5,
+     "im": 1,
+     "fm": 12,
+     "avg": 2255,
+     "top": [
+      [
+       "GM",
+       "Aditya, Mittal",
+       "IND",
+       2616
+      ],
+      [
+       "GM",
+       "Subelj, Jan",
+       "SLO",
+       2526
+      ],
+      [
+       "GM",
+       "Raja, Rithvik R",
+       "IND",
+       2519
+      ],
+      [
+       "GM",
+       "Diermair, Andreas",
+       "AUT",
+       2441
+      ],
+      [
+       "IM",
+       "Haug, Havard",
+       "NOR",
+       2430
+      ],
+      [
+       "GM",
+       "Raahul, V S",
+       "IND",
+       2429
+      ],
+      [
+       "FM",
+       "Ostensen, Nicolai Maxime",
+       "NOR",
+       2416
+      ],
+      [
+       "FM",
+       "Collin, Moritz Valentin",
+       "SUI",
+       2403
+      ],
+      [
+       "WGM",
+       "Vantika, Agrawal",
+       "IND",
+       2399
+      ],
+      [
+       "FM",
+       "Paikens, Reinis",
+       "LAT",
+       2359
+      ],
+      [
+       "FM",
+       "Vaidyanathan, Kannan",
+       "USA",
+       2352
+      ],
+      [
+       "FM",
+       "Olsen, William Alexander",
+       "NOR",
+       2312
+      ],
+      [
+       "FM",
+       "Murawski, Jan",
+       "ENG",
+       2300
+      ],
+      [
+       "FM",
+       "Valdats, Reinis",
+       "LAT",
+       2283
+      ],
+      [
+       "FM",
+       "Belyaletdinov, Leonard",
+       "SLO",
+       2280
+      ],
+      [
+       "FM",
+       "Khoo-Thwe, Louis",
+       "NOR",
+       2276
+      ],
+      [
+       "FM",
+       "Savicevs, Arsenijs",
+       "LAT",
+       2255
+      ],
+      [
+       "FM",
+       "Torfoss, Sivert Schanche",
+       "NOR",
+       2252
+      ],
+      [
+       "CM",
+       "Platonovs, Nikolajs",
+       "LAT",
+       2239
+      ],
+      [
+       "FM",
+       "Sandhöfner, Florian",
+       "AUT",
+       2237
+      ],
+      [
+       "CM",
+       "Derr, Oleg",
+       "GER",
+       2229
+      ],
+      [
+       "WFM",
+       "Malassagne, Isabelle",
+       "FRA",
+       2228
+      ],
+      [
+       "CM",
+       "Engelsen, Teodor Tenfjord",
+       "NOR",
+       2221
+      ],
+      [
+       "CM",
+       "Pieri, Pierre-Louis",
+       "FRA",
+       2210
+      ],
+      [
+       "",
+       "Leftheriotis, Alexandros",
+       "GRE",
+       2177
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1482880.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2026 Open A",
+     "players": 275,
+     "gm": 11,
+     "im": 25,
+     "avg": 2203,
+     "winner": "IM Travadon, Loic (FRA), 7.5 pts",
+     "top": [
+      [
+       "IM",
+       "Travadon, Loic",
+       "FRA",
+       2483,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Lalit, Babu M R",
+       "IND",
+       2511,
+       "7.5"
+      ],
+      [
+       "IM",
+       "Dehtiarov, Roman",
+       "UKR",
+       2430,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Shengelia, David",
+       "AUT",
+       2487,
+       "7"
+      ],
+      [
+       "GM",
+       "Socko, Bartosz",
+       "POL",
+       2580,
+       "7"
+      ],
+      [
+       "IM",
+       "Chasin, Nico",
+       "USA",
+       2523,
+       "7"
+      ],
+      [
+       "IM",
+       "Martins, Bruno Andre Leite",
+       "POR",
+       2376,
+       "7"
+      ],
+      [
+       "GM",
+       "Pranav, Anand",
+       "IND",
+       2606,
+       "7"
+      ],
+      [
+       "GM",
+       "Raja, Rithvik R",
+       "IND",
+       2535,
+       "7"
+      ],
+      [
+       "GM",
+       "Pranesh, M",
+       "IND",
+       2627,
+       "7"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1226434.aspx?lan=1"
+    }
    }
   },
   "cappelle-2027": {
@@ -92,26 +339,195 @@
   },
   "vardaris-2027": {
    "updatedAt": "7 Nov 2026",
-   "changes": "Format found: 7 rounds, and players rated 2300+ play free.",
+   "changes": "Dates corrected from chess-results: 11–15 March 2027, 7 rounds.",
    "fields": {
     "rounds": 7,
     "fee": "Open A: free for titled players and players rated 2300+ (2025 rules).",
     "tc": "90 min + 30 s",
-    "note": "Only 7 rounds, so it can't give a norm. 2025 venue: Holiday Inn Thessaloniki. Prize fund €4,350, 1st prize €1,000."
+    "note": "Only 7 rounds, so it can't give a norm. 2025 venue: Holiday Inn Thessaloniki. Prize fund €4,350, 1st prize €1,000.",
+    "month": "2027-03",
+    "start": "2027-03-11",
+    "end": "2027-03-15"
    },
    "details": {
     "prize": "€4,350 total, Open A 1st prize €1,000 (2025).",
     "venue": "Hotel Holiday Inn, 8 Monastiriou St, Thessaloniki (2025)",
     "sources": [
+     "https://chess-results.com/tnr1512782.aspx?lan=1",
      "https://doc.fide.com/docs/CALENDAR/2025/8th_Vardaris_Regulations.pdf"
-    ]
+    ],
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 79,
+     "gm": 4,
+     "im": 4,
+     "fm": 2,
+     "avg": 1828,
+     "top": [
+      [
+       "GM",
+       "Georgiev, Kiril",
+       "BUL",
+       2554
+      ],
+      [
+       "GM",
+       "Alexakis, Dimitris",
+       "GRE",
+       2536
+      ],
+      [
+       "GM",
+       "Grigorov, Grigor",
+       "BUL",
+       2496
+      ],
+      [
+       "GM",
+       "Ioannidis, Evgenios",
+       "GRE",
+       2468
+      ],
+      [
+       "IM",
+       "Krallis, Christos",
+       "GRE",
+       2437
+      ],
+      [
+       "IM",
+       "Baumegger, Siegfried",
+       "AUT",
+       2355
+      ],
+      [
+       "IM",
+       "Papasimakopoulos, Alexandros",
+       "GRE",
+       2339
+      ],
+      [
+       "IM",
+       "Dimitrov, Atanas",
+       "GRE",
+       2213
+      ],
+      [
+       "FM",
+       "Svicevic, Rastko",
+       "SRB",
+       2155
+      ],
+      [
+       "CM",
+       "Stoimenidis, Dimitrios",
+       "GRE",
+       2153
+      ],
+      [
+       "",
+       "Skomial, Mateusz",
+       "POL",
+       2142
+      ],
+      [
+       "CM",
+       "Boutikos, Eleftherios",
+       "GRE",
+       2136
+      ],
+      [
+       "WIM",
+       "Pavlidou, Ekaterini",
+       "GRE",
+       2123
+      ],
+      [
+       "FM",
+       "Idrisov, Tabriz",
+       "AZE",
+       2102
+      ],
+      [
+       "",
+       "Vardakas, Grigorios",
+       "GRE",
+       2092
+      ],
+      [
+       "",
+       "Mantazis, Georgios Rafail",
+       "GRE",
+       2091
+      ],
+      [
+       "",
+       "Tsolov, Aleksandar",
+       "BUL",
+       2088
+      ],
+      [
+       "CM",
+       "Mihaylov, Bozhidar",
+       "BUL",
+       2043
+      ],
+      [
+       "",
+       "Chalkias, Alexios",
+       "GRE",
+       2031
+      ],
+      [
+       "",
+       "Cook, Michael-Antony",
+       "GRE",
+       2020
+      ],
+      [
+       "WCM",
+       "Cengel, Edibe Eylul",
+       "TUR",
+       2004
+      ],
+      [
+       "",
+       "Tsiotridis, Panayotis",
+       "GRE",
+       1988
+      ],
+      [
+       "",
+       "Milovanovic, Ninoslav",
+       "SRB",
+       1975
+      ],
+      [
+       "WFM",
+       "Stefanidi, Maria-Anna",
+       "GRE",
+       1968
+      ],
+      [
+       "",
+       "Akin, Mehmet Efe",
+       "TUR",
+       1946
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1512782.aspx?lan=1"
+    }
    }
   },
   "sligo-2027": {
    "updatedAt": "7 Nov 2026",
-   "changes": "2026 format found: the Masters was only 5 rounds.",
+   "changes": "9-round Open found on chess-results: 1–7 Feb 2027 at Radisson Blu.",
    "fields": {
-    "note": "In 2026 the Masters was a 5-round weekend event (30 players, €65–85 entry, 1st prize €825) and there was also a separate 9-round Open. Check which section has 9 rounds in 2027."
+    "note": "In 2026 the Masters was a 5-round weekend event (30 players, €65–85 entry, 1st prize €825) and there was also a separate 9-round Open. Check which section has 9 rounds in 2027.",
+    "start": "2027-02-01",
+    "end": "2027-02-07",
+    "rounds": 9,
+    "tc": "90 min + 30 s"
    },
    "details": {
     "lastYear": {
@@ -123,12 +539,13 @@
     },
     "sources": [
      "https://www.irlchess.com/sligo-masters2026_allfiles/information_sligo-masters2026.html"
-    ]
+    ],
+    "venue": "Radisson Blu Hotel & Spa, Rosses Point, Sligo"
    }
   },
   "bled-2027": {
    "updatedAt": "7 Nov 2026",
-   "changes": "Warning: in 2026 the main tournament was only for players rated up to 2300.",
+   "changes": "Chess-results list: top player 2183, consistent with the 2300 rating limit.",
    "fields": {
     "pick": false,
     "tc": "75 min + 15 min after move 40, +30 s per move",
@@ -144,32 +561,2547 @@
      }
     ],
     "sources": [
+     "https://chess-results.com/tnr1496771.aspx?lan=1",
+     "https://chess-results.com/tnr1346142.aspx?lan=1",
      "https://schack.se/wp-content/uploads/2026/01/Bled-Chess-Festival-2026.pdf"
-    ]
+    ],
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 22,
+     "gm": 0,
+     "im": 0,
+     "fm": 1,
+     "avg": 1857,
+     "top": [
+      [
+       "CM",
+       "Michalek, Christoph",
+       "GER",
+       2183
+      ],
+      [
+       "FM",
+       "Schulz, Michael",
+       "GER",
+       2114
+      ],
+      [
+       "",
+       "Hamer, Martyn",
+       "ENG",
+       2069
+      ],
+      [
+       "",
+       "Engesser, Jonas",
+       "GER",
+       2053
+      ],
+      [
+       "CM",
+       "Li Ying, Patrick",
+       "MRI",
+       2036
+      ],
+      [
+       "",
+       "Dekker, Alain",
+       "RSA",
+       2012
+      ],
+      [
+       "",
+       "Byron, Alan M",
+       "ENG",
+       2005
+      ],
+      [
+       "",
+       "Schranzhofer, Marco",
+       "AUT",
+       1967
+      ],
+      [
+       "",
+       "Hendrikse, Ad",
+       "NED",
+       1918
+      ],
+      [
+       "",
+       "Neller, Christian",
+       "GER",
+       1884
+      ],
+      [
+       "",
+       "Hertling, Juergen",
+       "GER",
+       1839
+      ],
+      [
+       "",
+       "Vlug, Andre",
+       "NED",
+       1836
+      ],
+      [
+       "",
+       "Scoccianti, Raffaele",
+       "ITA",
+       1812
+      ],
+      [
+       "",
+       "Michalek, Franz",
+       "GER",
+       1810
+      ],
+      [
+       "",
+       "Kaloh, Edvard",
+       "SLO",
+       1789
+      ],
+      [
+       "",
+       "Perschk, Bendix",
+       "GER",
+       1781
+      ],
+      [
+       "",
+       "Rutte, Edwin",
+       "NED",
+       1763
+      ],
+      [
+       "",
+       "Tok, Ege",
+       "TUR",
+       1619
+      ],
+      [
+       "",
+       "Godon, Alexandre",
+       "FRA",
+       1552
+      ],
+      [
+       "",
+       "Kaloh, Frida",
+       "SLO",
+       1505
+      ],
+      [
+       "",
+       "Baškovec, Brin",
+       "SLO",
+       1456
+      ],
+      [
+       "",
+       "Fischer, Benjamin Plamen",
+       "GER",
+       0
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1496771.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2026",
+     "players": 78,
+     "gm": 0,
+     "im": 4,
+     "avg": 1936,
+     "winner": "FM Nainys, Zanas (LTU), 7.5 pts",
+     "top": [
+      [
+       "FM",
+       "Nainys, Zanas",
+       "LTU",
+       2286,
+       "7.5"
+      ],
+      [
+       "",
+       "Belyaletdinov, Leonard",
+       "SLO",
+       2119,
+       "7"
+      ],
+      [
+       "IM",
+       "Mazi, Leon",
+       "SLO",
+       2280,
+       "6.5"
+      ],
+      [
+       "FM",
+       "Dorrance, Adam",
+       "CAN",
+       2288,
+       "6.5"
+      ],
+      [
+       "FM",
+       "Furlan, Miha",
+       "SLO",
+       2239,
+       "6.5"
+      ],
+      [
+       "IM",
+       "Biti, Ozren",
+       "CRO",
+       2267,
+       "6"
+      ],
+      [
+       "",
+       "Mestek, Igor",
+       "SLO",
+       2013,
+       "6"
+      ],
+      [
+       "WIM",
+       "Vidic, Teja",
+       "SLO",
+       2106,
+       "6"
+      ],
+      [
+       "",
+       "De Graaf, Dick",
+       "NED",
+       2126,
+       "6"
+      ],
+      [
+       "",
+       "Krstić, David",
+       "SLO",
+       2158,
+       "5.5"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1346142.aspx?lan=1"
+    }
    }
   },
   "prague-open-2027": {
    "updatedAt": "7 Nov 2026",
-   "changes": "Organiser fee rules added (same organiser as Marienbad).",
+   "changes": "Real list from chess-results: 12 players so far (A IM Open).",
    "fields": {
-    "fee": "Not published yet. The same organiser (AVE Chess) charged an FM about €31–64 in the open and about €190–230 in an IM round robin at Marienbad/Pilsen."
+    "fee": "Not published yet. The same organiser (AVE Chess) charged an FM about €31–64 in the open and about €190–230 in an IM round robin at Marienbad/Pilsen.",
+    "rounds": 9
    },
    "details": {
     "sources": [
+     "https://chess-results.com/tnr1446795.aspx?lan=1",
+     "https://chess-results.com/tnr1205275.aspx?lan=1",
      "https://ajedrezenmadrid.com/torneos/2027/27_marienbad.pdf",
      "https://chessopen.ru/upload/iblock/fa5/x8xizt702lrqjb0ktg841p67ts47jh1h.pdf"
-    ]
+    ],
+    "venue": "Hotel Olympik, Prague",
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 12,
+     "gm": 0,
+     "im": 1,
+     "fm": 0,
+     "avg": 1912,
+     "top": [
+      [
+       "IM",
+       "Adarsh, Tripathi",
+       "IND",
+       2269
+      ],
+      [
+       "",
+       "Chong, Jin Cheng",
+       "MAS",
+       2156
+      ],
+      [
+       "",
+       "Lauritsen, Martin Lee",
+       "DEN",
+       2077
+      ],
+      [
+       "",
+       "Khandhar, Kaushal",
+       "MAS",
+       2016
+      ],
+      [
+       "",
+       "Markina, Sofiia",
+       "CZE",
+       2004
+      ],
+      [
+       "",
+       "Fathallah, Joe",
+       "WLS",
+       1964
+      ],
+      [
+       "",
+       "Ramakrishnan, Yoggenraj",
+       "MAS",
+       1936
+      ],
+      [
+       "",
+       "Chanthiran, Taj Prasshad Nambiyar",
+       "MAS",
+       1920
+      ],
+      [
+       "",
+       "Rejzek, Zdenek",
+       "CZE",
+       1793
+      ],
+      [
+       "",
+       "Nielsen, Pia",
+       "DEN",
+       1616
+      ],
+      [
+       "",
+       "Kum, Busra",
+       "TUR",
+       1604
+      ],
+      [
+       "",
+       "Kumanan, Shiv Sarves Manan",
+       "MAS",
+       1585
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1446795.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2026 A IM Open",
+     "players": 150,
+     "gm": 5,
+     "im": 8,
+     "avg": 1952,
+     "winner": "GM Moroni, Luca Jr (ITA), 7.5 pts",
+     "top": [
+      [
+       "GM",
+       "Moroni, Luca Jr",
+       "ITA",
+       2560,
+       "7.5"
+      ],
+      [
+       "IM",
+       "Neelash, Saha",
+       "IND",
+       2474,
+       "7"
+      ],
+      [
+       "FM",
+       "Pankiv, Maksym",
+       "UKR",
+       2296,
+       "7"
+      ],
+      [
+       "IM",
+       "Prokofiev, Valentyn",
+       "UKR",
+       2464,
+       "6.5"
+      ],
+      [
+       "GM",
+       "Poetsch, Hagen",
+       "GER",
+       2441,
+       "6.5"
+      ],
+      [
+       "IM",
+       "Kuegel, Tobias",
+       "GER",
+       2388,
+       "6.5"
+      ],
+      [
+       "CM",
+       "Karwowski, Kacper",
+       "POL",
+       2267,
+       "6.5"
+      ],
+      [
+       "",
+       "Ouaki, Mark",
+       "BEL",
+       2128,
+       "6.5"
+      ],
+      [
+       "",
+       "Terhuven, Patrick",
+       "GER",
+       2167,
+       "6.5"
+      ],
+      [
+       "GM",
+       "Korneev, Oleg",
+       "ESP",
+       2427,
+       "6.5"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1205275.aspx?lan=1"
+    }
    }
   },
   "jersey-2027": {
    "updatedAt": "7 Nov 2026",
-   "changes": "Venue added. GM and IM norms possible.",
+   "changes": "Last year results added from chess-results.",
    "details": {
     "venue": "Hotel Ambassadeur, St Clement Bay, Jersey (2025)",
     "sources": [
+     "https://chess-results.com/tnr1354359.aspx?lan=1",
      "https://chesscircuit.substack.com/p/jersey-international-and-blitz"
-    ]
+    ],
+    "lastYear": {
+     "edition": "2026 Open",
+     "players": 14,
+     "gm": 2,
+     "im": 3,
+     "avg": 2104,
+     "winner": "IM Wang, Hao(Zj) (CHN), 5.5 pts",
+     "top": [
+      [
+       "IM",
+       "Wang, Hao(Zj)",
+       "CHN",
+       2418,
+       "5.5"
+      ],
+      [
+       "GM",
+       "Arkell, Keith C",
+       "ENG",
+       2367,
+       "5"
+      ],
+      [
+       "IM",
+       "Houska, Jovanka",
+       "ENG",
+       2314,
+       "5"
+      ],
+      [
+       "GM",
+       "Golubka, Petro",
+       "CAN",
+       2345,
+       "4.5"
+      ],
+      [
+       "WGM",
+       "Toma, Katarzyna",
+       "ENG",
+       2201,
+       "4"
+      ],
+      [
+       "",
+       "Hill, Alistair",
+       "ENG",
+       2137,
+       "4"
+      ],
+      [
+       "FM",
+       "Gourlay, Iain",
+       "SCO",
+       2289,
+       "4"
+      ],
+      [
+       "",
+       "Hagesather, Arne",
+       "NOR",
+       2016,
+       "3.5"
+      ],
+      [
+       "IM",
+       "Dunnington, Angus J",
+       "SCO",
+       2209,
+       "3.5"
+      ],
+      [
+       "",
+       "Homer, Stephen J",
+       "ENG",
+       1988,
+       "2.5"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1354359.aspx?lan=1"
+    }
    }
+  },
+  "bali-2026": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 175,
+     "gm": 20,
+     "im": 25,
+     "fm": 28,
+     "avg": 2158,
+     "top": [
+      [
+       "GM",
+       "Pranav, Anand",
+       "",
+       2607
+      ],
+      [
+       "GM",
+       "Kamsky, Gata",
+       "",
+       2586
+      ],
+      [
+       "GM",
+       "Movahed, Sina",
+       "",
+       2576
+      ],
+      [
+       "GM",
+       "Gurevich, Mikhail",
+       "",
+       2531
+      ],
+      [
+       "GM",
+       "Petriashvili, Nikoloz",
+       "",
+       2517
+      ],
+      [
+       "GM",
+       "Georgiev, Kiril",
+       "",
+       2512
+      ],
+      [
+       "GM",
+       "Noe, Christopher",
+       "",
+       2511
+      ],
+      [
+       "IM",
+       "Cieslak, Patryk",
+       "",
+       2511
+      ],
+      [
+       "GM",
+       "Ilinca, Felix-Antonio",
+       "",
+       2491
+      ],
+      [
+       "GM",
+       "Gallego Alcaraz, Andres Felipe",
+       "",
+       2486
+      ],
+      [
+       "IM",
+       "Fiorito, Francisco",
+       "",
+       2475
+      ],
+      [
+       "IM",
+       "Sowinski, Pawel",
+       "",
+       2473
+      ],
+      [
+       "GM",
+       "Castellanos Rodriguez, Renier",
+       "",
+       2468
+      ],
+      [
+       "GM",
+       "Stocek, Jiri",
+       "",
+       2468
+      ],
+      [
+       "GM",
+       "Almeida Quintana, Omar",
+       "",
+       2463
+      ],
+      [
+       "IM",
+       "Cabarkapa, Novak",
+       "",
+       2456
+      ],
+      [
+       "IM",
+       "Bakhmatskyi, Vladyslav",
+       "",
+       2451
+      ],
+      [
+       "IM",
+       "Tutisani, Noe",
+       "",
+       2440
+      ],
+      [
+       "GM",
+       "Larino Nieto, David",
+       "",
+       2438
+      ],
+      [
+       "GM",
+       "Del Rio De Angelis, Salvador Gabriel",
+       "",
+       2424
+      ],
+      [
+       "GM",
+       "Korneev, Oleg",
+       "",
+       2423
+      ],
+      [
+       "IM",
+       "Perez Marimon, Jorge De Jesus",
+       "",
+       2422
+      ],
+      [
+       "IM",
+       "Fiorito, Joaquin",
+       "",
+       2417
+      ],
+      [
+       "FM",
+       "Kacprzak, Karol",
+       "",
+       2417
+      ],
+      [
+       "GM",
+       "Marin, Mihail",
+       "",
+       2414
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1411135.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2025 (XXII)",
+     "players": 206,
+     "gm": 14,
+     "im": 20,
+     "avg": 2125,
+     "winner": "GM Bernadskiy, Vitaliy (UKR), 7.5 pts",
+     "top": [
+      [
+       "GM",
+       "Bernadskiy, Vitaliy",
+       "UKR",
+       2491,
+       "7.5"
+      ],
+      [
+       "IM",
+       "Xu, Zhihang",
+       "CHN",
+       2477,
+       "7"
+      ],
+      [
+       "IM",
+       "Fernandez Guillen, Ernesto J.",
+       "CUB",
+       2488,
+       "7"
+      ],
+      [
+       "GM",
+       "Alsina Leal, Daniel",
+       "ESP",
+       2490,
+       "7"
+      ],
+      [
+       "GM",
+       "Vetoshko, Volodymyr",
+       "UKR",
+       2513,
+       "6.5"
+      ],
+      [
+       "GM",
+       "Jacobson, Brandon",
+       "USA",
+       2599,
+       "6.5"
+      ],
+      [
+       "GM",
+       "Albornoz Cabrera, Carlos Daniel",
+       "CUB",
+       2584,
+       "6.5"
+      ],
+      [
+       "IM",
+       "Petriashvili, Nikoloz",
+       "GEO",
+       2509,
+       "6.5"
+      ],
+      [
+       "FM",
+       "Assylov, Miras",
+       "KAZ",
+       2393,
+       "6.5"
+      ],
+      [
+       "IM",
+       "Vergara Anton, Diego",
+       "ESP",
+       2426,
+       "6.5"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1142193.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1411135.aspx?lan=1",
+     "https://chess-results.com/tnr1142193.aspx?lan=1"
+    ]
+   },
+   "changes": "Player list checked on chess-results: 175 players, 20 GMs, 25 IMs. Last year added."
+  },
+  "groningen-2026": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 84,
+     "gm": 8,
+     "im": 11,
+     "fm": 25,
+     "avg": 2258,
+     "top": [
+      [
+       "GM",
+       "Van Foreest, Lucas",
+       "NED",
+       2558
+      ],
+      [
+       "GM",
+       "Sethuraman, S.P.",
+       "IND",
+       2556
+      ],
+      [
+       "GM",
+       "Beerdsen, Thomas",
+       "NED",
+       2518
+      ],
+      [
+       "GM",
+       "Vignesh, N R",
+       "IND",
+       2513
+      ],
+      [
+       "GM",
+       "Grover, Sahaj",
+       "IND",
+       2487
+      ],
+      [
+       "IM",
+       "Muthaiah, Al",
+       "IND",
+       2484
+      ],
+      [
+       "IM",
+       "Ruzhansky, Elias",
+       "BEL",
+       2445
+      ],
+      [
+       "IM",
+       "Zwirs, Nico",
+       "NED",
+       2442
+      ],
+      [
+       "GM",
+       "Shyaam, Nikhil P",
+       "IND",
+       2432
+      ],
+      [
+       "IM",
+       "Korchynskyi, Mykola",
+       "GER",
+       2431
+      ],
+      [
+       "IM",
+       "Krallis, Christos",
+       "GRE",
+       2431
+      ],
+      [
+       "GM",
+       "Das, Sayantan",
+       "IND",
+       2414
+      ],
+      [
+       "GM",
+       "Raahul, V S",
+       "IND",
+       2409
+      ],
+      [
+       "IM",
+       "Maatman, Nick",
+       "NED",
+       2398
+      ],
+      [
+       "FM",
+       "Stein, Robert",
+       "GER",
+       2393
+      ],
+      [
+       "IM",
+       "De Boer, Eelke",
+       "NED",
+       2391
+      ],
+      [
+       "IM",
+       "Isanzhulov, Arystan",
+       "KAZ",
+       2384
+      ],
+      [
+       "FM",
+       "Dahl, Christoph",
+       "GER",
+       2376
+      ],
+      [
+       "IM",
+       "Ajay Krishna, S",
+       "IND",
+       2371
+      ],
+      [
+       "FM",
+       "Maris, Ivo",
+       "NED",
+       2360
+      ],
+      [
+       "WGM",
+       "Kairbekova, Amina",
+       "KAZ",
+       2355
+      ],
+      [
+       "IM",
+       "Kaustuv, Kundu",
+       "IND",
+       2350
+      ],
+      [
+       "FM",
+       "Ten Dam, Bram",
+       "NED",
+       2348
+      ],
+      [
+       "FM",
+       "Slagboom, Leandro",
+       "NED",
+       2345
+      ],
+      [
+       "FM",
+       "Kurt, Sascha",
+       "NED",
+       2343
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1479429.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2025 Open A",
+     "players": 63,
+     "gm": 6,
+     "im": 12,
+     "avg": 2260,
+     "winner": "IM Ruzhansky, Elias (BEL), 7 pts",
+     "top": [
+      [
+       "IM",
+       "Ruzhansky, Elias",
+       "BEL",
+       2432,
+       "7"
+      ],
+      [
+       "GM",
+       "Kazakouski, Valery",
+       "LTU",
+       2585,
+       "6.5"
+      ],
+      [
+       "GM",
+       "Vignesh, N R",
+       "IND",
+       2488,
+       "6.5"
+      ],
+      [
+       "FM",
+       "Korchynskyi, Mykola",
+       "GER",
+       2418,
+       "6.5"
+      ],
+      [
+       "GM",
+       "Bernadskiy, Vitaliy",
+       "UKR",
+       2522,
+       "6"
+      ],
+      [
+       "GM",
+       "Prraneeth, Vuppala",
+       "IND",
+       2469,
+       "6"
+      ],
+      [
+       "IM",
+       "Manafov, Vugar",
+       "AZE",
+       2438,
+       "6"
+      ],
+      [
+       "IM",
+       "Babazada, Khazar",
+       "AZE",
+       2507,
+       "6"
+      ],
+      [
+       "GM",
+       "Shyaam, Nikhil P",
+       "IND",
+       2400,
+       "6"
+      ],
+      [
+       "IM",
+       "Martins, David Pires Tavares",
+       "POR",
+       2443,
+       "6"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1210514.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1479429.aspx?lan=1",
+     "https://chess-results.com/tnr1210514.aspx?lan=1"
+    ]
+   },
+   "changes": "Real list from chess-results: 84 players, 8 GMs, 11 IMs (avg 2258)."
+  },
+  "rilton-2026": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 98,
+     "gm": 20,
+     "im": 18,
+     "fm": 37,
+     "avg": 2317,
+     "top": [
+      [
+       "GM",
+       "Xiangyu Xu",
+       "CHN",
+       2628
+      ],
+      [
+       "GM",
+       "Loek Van Wely",
+       "NED",
+       2626
+      ],
+      [
+       "GM",
+       "Anton Demchenko",
+       "SLO",
+       2579
+      ],
+      [
+       "GM",
+       "Dominik Horvath",
+       "AUT",
+       2566
+      ],
+      [
+       "GM",
+       "Martin Kraemer",
+       "GER",
+       2557
+      ],
+      [
+       "GM",
+       "Diptayan Ghosh",
+       "IND",
+       2551
+      ],
+      [
+       "GM",
+       "Toms Kantans",
+       "LAT",
+       2549
+      ],
+      [
+       "GM",
+       "Evgeny Postny",
+       "ISR",
+       2495
+      ],
+      [
+       "IM",
+       "Vladyslav Larkin",
+       "UKR",
+       2491
+      ],
+      [
+       "IM",
+       "Matic Lavrencic",
+       "SLO",
+       2489
+      ],
+      [
+       "GM",
+       "Erik Blomqvist",
+       "SWE",
+       2485
+      ],
+      [
+       "GM",
+       "Vitaly Sivuk",
+       "SWE",
+       2481
+      ],
+      [
+       "GM",
+       "Deep Sengupta",
+       "IND",
+       2479
+      ],
+      [
+       "IM",
+       "Adelard Bai",
+       "TPE",
+       2471
+      ],
+      [
+       "GM",
+       "Kaido Kulaots",
+       "EST",
+       2461
+      ],
+      [
+       "IM",
+       "Krishna G V Sai",
+       "CAN",
+       2452
+      ],
+      [
+       "GM",
+       "Eduardas Rozentalis",
+       "LTU",
+       2451
+      ],
+      [
+       "IM",
+       "Artyom Bogdanov",
+       "KAZ",
+       2451
+      ],
+      [
+       "IM",
+       "Samrug Narayanan",
+       "USA",
+       2449
+      ],
+      [
+       "GM",
+       "Tiger Hillarp Persson",
+       "SWE",
+       2444
+      ],
+      [
+       "IM",
+       "Aron Pasti",
+       "HUN",
+       2441
+      ],
+      [
+       "FM",
+       "Arshia Alaghehmand",
+       "IRI",
+       2435
+      ],
+      [
+       "IM",
+       "Collin Colbow",
+       "GER",
+       2427
+      ],
+      [
+       "GM",
+       "V S Raahul",
+       "IND",
+       2409
+      ],
+      [
+       "IM",
+       "Albert Winkelman",
+       "AUS",
+       2407
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1475608.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2025/26",
+     "players": 168,
+     "gm": 22,
+     "im": 36,
+     "avg": 2291,
+     "winner": "GM XU, Xiangyu (CHN), 8 pts",
+     "top": [
+      [
+       "GM",
+       "XU, Xiangyu",
+       "CHN",
+       2601,
+       "8"
+      ],
+      [
+       "GM",
+       "DEMCHENKO, Anton",
+       "SLO",
+       2631,
+       "7"
+      ],
+      [
+       "IM",
+       "SIVA, Mahadevan",
+       "IND",
+       2427,
+       "7"
+      ],
+      [
+       "GM",
+       "DAI, Changren",
+       "CHN",
+       2551,
+       "7"
+      ],
+      [
+       "IM",
+       "XIE, Kaifan",
+       "CHN",
+       2426,
+       "6.5"
+      ],
+      [
+       "IM",
+       "DOTZER, Lukas",
+       "AUT",
+       2478,
+       "6.5"
+      ],
+      [
+       "GM",
+       "LI, Di",
+       "CHN",
+       2549,
+       "6.5"
+      ],
+      [
+       "GM",
+       "MESHKOVS, Nikita",
+       "LAT",
+       2561,
+       "6.5"
+      ],
+      [
+       "GM",
+       "SENGUPTA, Deep",
+       "IND",
+       2479,
+       "6.5"
+      ],
+      [
+       "IM",
+       "RACZEK, Krzysztof",
+       "POL",
+       2489,
+       "6.5"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1301931.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1475608.aspx?lan=1",
+     "https://chess-results.com/tnr1301931.aspx?lan=1"
+    ]
+   },
+   "changes": "Real list from chess-results: 98 players, 20 GMs (avg 2317)."
+  },
+  "marienbad-2027": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 6,
+     "gm": 0,
+     "im": 2,
+     "fm": 1,
+     "avg": 2190,
+     "top": [
+      [
+       "IM",
+       "Pisk, Petr",
+       "CZE",
+       2306
+      ],
+      [
+       "FM",
+       "Hu, Yifei",
+       "AUS",
+       2223
+      ],
+      [
+       "IM",
+       "Mannion, Stephen R",
+       "SCO",
+       2191
+      ],
+      [
+       "",
+       "Zadrapova, Amalie",
+       "CZE",
+       2178
+      ],
+      [
+       "WIM",
+       "Smietanska, Wiktoria",
+       "POL",
+       2176
+      ],
+      [
+       "",
+       "Sliwerski, Radoslaw",
+       "POL",
+       2066
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1446843.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2026 B1 IM round robin",
+     "players": 10,
+     "gm": 0,
+     "im": 3,
+     "avg": 2245,
+     "winner": "IM Neelash, Saha (IND), 8 pts",
+     "top": [
+      [
+       "IM",
+       "Neelash, Saha",
+       "IND",
+       2474,
+       "8"
+      ],
+      [
+       "FM",
+       "Mostbauer, Florian",
+       "AUT",
+       2343,
+       "6"
+      ],
+      [
+       "FM",
+       "Avila Bautista, Roberto Al",
+       "MEX",
+       2315,
+       "4.5"
+      ],
+      [
+       "IM",
+       "Del Rey, Diego",
+       "ESP",
+       2282,
+       "4.5"
+      ],
+      [
+       "CM",
+       "Korszanski, Stanislaw",
+       "POL",
+       2227,
+       "4"
+      ],
+      [
+       "CM",
+       "Krzywda, Andrzej",
+       "POL",
+       2140,
+       "4"
+      ],
+      [
+       "FM",
+       "Matras, Ondrej",
+       "CZE",
+       2174,
+       "4"
+      ],
+      [
+       "",
+       "Sliwerski, Radoslaw",
+       "POL",
+       2061,
+       "3.5"
+      ],
+      [
+       "WIM",
+       "Smietanska, Wiktoria",
+       "POL",
+       2226,
+       "3.5"
+      ],
+      [
+       "IM",
+       "Dunnington, Angus J",
+       "SCO",
+       2203,
+       "3"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1205694.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1446843.aspx?lan=1",
+     "https://chess-results.com/tnr1205694.aspx?lan=1"
+    ]
+   },
+   "changes": "IM round robin: 6 of 10 places filled (chess-results)."
+  },
+  "reykjavik-2027": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 55,
+     "gm": 3,
+     "im": 3,
+     "fm": 0,
+     "avg": 1898,
+     "top": [
+      [
+       "GM",
+       "Vignir Vatnar Stefansson",
+       "ISL",
+       2510
+      ],
+      [
+       "GM",
+       "Viacheslav Tilicheev",
+       "SRB",
+       2443
+      ],
+      [
+       "IM",
+       "Kamil Dzida",
+       "POL",
+       2422
+      ],
+      [
+       "IM",
+       "Sebastian Poltorak",
+       "POL",
+       2404
+      ],
+      [
+       "GM",
+       "Torbjorn Ringdal Hansen",
+       "NOR",
+       2384
+      ],
+      [
+       "IM",
+       "Anto Cristiano F Manish",
+       "IND",
+       2362
+      ],
+      [
+       "",
+       "Josef Omarsson",
+       "ISL",
+       2260
+      ],
+      [
+       "CM",
+       "Stefan Maltezeanu",
+       "LUX",
+       2178
+      ],
+      [
+       "WFM",
+       "Abigail Zhou",
+       "USA",
+       2102
+      ],
+      [
+       "",
+       "Kjeld Ostersen",
+       "DEN",
+       2076
+      ],
+      [
+       "",
+       "Danat Ayazbayev",
+       "KAZ",
+       2051
+      ],
+      [
+       "",
+       "Joaquin Aarts",
+       "NED",
+       2044
+      ],
+      [
+       "",
+       "Landon Meadors",
+       "USA",
+       2018
+      ],
+      [
+       "",
+       "Edwin Woudt",
+       "NED",
+       2016
+      ],
+      [
+       "",
+       "Anil Surender",
+       "SWE",
+       2001
+      ],
+      [
+       "CM",
+       "Lukas W Lebakken",
+       "USA",
+       1988
+      ],
+      [
+       "",
+       "Yuri Eijk",
+       "NED",
+       1975
+      ],
+      [
+       "",
+       "Chris Doran",
+       "ENG",
+       1949
+      ],
+      [
+       "",
+       "Erik Lust",
+       "NED",
+       1929
+      ],
+      [
+       "",
+       "Quentin Geubel",
+       "BEL",
+       1897
+      ],
+      [
+       "",
+       "Orvar Holm Brynjarsson",
+       "ISL",
+       1888
+      ],
+      [
+       "",
+       "Max Hoekstra",
+       "NED",
+       1882
+      ],
+      [
+       "",
+       "Thomas Renner",
+       "GER",
+       1881
+      ],
+      [
+       "",
+       "Raymond Wynarczyk",
+       "ENG",
+       1845
+      ],
+      [
+       "",
+       "Milo Su",
+       "USA",
+       1841
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1480891.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2026",
+     "players": 422,
+     "gm": 32,
+     "im": 31,
+     "avg": 1985,
+     "winner": "GM M. Amin Tabatabaei (IRI), 8 pts",
+     "top": [
+      [
+       "GM",
+       "M. Amin Tabatabaei",
+       "IRI",
+       2700,
+       "8"
+      ],
+      [
+       "GM",
+       "Jianchao Zhou",
+       "USA",
+       2584,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Vasyl Ivanchuk",
+       "UKR",
+       2624,
+       "7"
+      ],
+      [
+       "GM",
+       "Mads Andersen",
+       "DEN",
+       2562,
+       "7"
+      ],
+      [
+       "GM",
+       "Vahap Sanal",
+       "TUR",
+       2551,
+       "7"
+      ],
+      [
+       "GM",
+       "Matthieu Cornette",
+       "FRA",
+       2535,
+       "7"
+      ],
+      [
+       "GM",
+       "Tong(Qd) Xiao",
+       "CHN",
+       2555,
+       "7"
+      ],
+      [
+       "GM",
+       "Abhijeet Gupta",
+       "IND",
+       2506,
+       "7"
+      ],
+      [
+       "IM",
+       "Irakli Akhvlediani",
+       "GEO",
+       2429,
+       "7"
+      ],
+      [
+       "GM",
+       "Bogdan-Daniel Deac",
+       "ROU",
+       2655,
+       "6.5"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1230467.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1480891.aspx?lan=1",
+     "https://chess-results.com/tnr1230467.aspx?lan=1"
+    ]
+   },
+   "changes": "Real list from chess-results: 55 players so far."
+  },
+  "menorca-2027": {
+   "updatedAt": "7 Nov 2026",
+   "fields": {
+    "rounds": 9,
+    "tc": "90 min + 30 s"
+   },
+   "details": {
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 81,
+     "gm": 17,
+     "im": 10,
+     "fm": 7,
+     "avg": 2187,
+     "top": [
+      [
+       "GM",
+       "Lu, Shanglei",
+       "CHN",
+       2637
+      ],
+      [
+       "GM",
+       "Iniyan, Pa",
+       "IND",
+       2581
+      ],
+      [
+       "GM",
+       "Narayanan, S L",
+       "IND",
+       2557
+      ],
+      [
+       "GM",
+       "Acs, Peter",
+       "HUN",
+       2554
+      ],
+      [
+       "GM",
+       "Sosa, Tomas",
+       "ARG",
+       2551
+      ],
+      [
+       "GM",
+       "Petkov, Momchil",
+       "BUL",
+       2547
+      ],
+      [
+       "GM",
+       "Kosakowski, Jakub",
+       "POL",
+       2523
+      ],
+      [
+       "GM",
+       "Raja, Rithvik R",
+       "IND",
+       2519
+      ],
+      [
+       "GM",
+       "Hardaway, Brewington",
+       "USA",
+       2509
+      ],
+      [
+       "GM",
+       "Szpar, Milosz",
+       "POL",
+       2507
+      ],
+      [
+       "GM",
+       "Suleymenov, Alisher",
+       "KAZ",
+       2502
+      ],
+      [
+       "GM",
+       "Solodovnichenko, Yuri",
+       "UKR",
+       2491
+      ],
+      [
+       "GM",
+       "Rohith, Krishna S",
+       "IND",
+       2490
+      ],
+      [
+       "GM",
+       "Nasuta, Grzegorz",
+       "POL",
+       2487
+      ],
+      [
+       "GM",
+       "Sumets, Andrey",
+       "UKR",
+       2486
+      ],
+      [
+       "GM",
+       "Prraneeth, Vuppala",
+       "IND",
+       2475
+      ],
+      [
+       "GM",
+       "Cuenca Jimenez, Jose Fernando",
+       "ESP",
+       2471
+      ],
+      [
+       "IM",
+       "Levin, Guy",
+       "ISR",
+       2467
+      ],
+      [
+       "IM",
+       "Brodowski, Piotr",
+       "POL",
+       2466
+      ],
+      [
+       "IM",
+       "Decuigniere, Tom",
+       "FRA",
+       2452
+      ],
+      [
+       "IM",
+       "Pasti, Aron",
+       "HUN",
+       2439
+      ],
+      [
+       "IM",
+       "Sousa, Andre Ventura",
+       "POR",
+       2426
+      ],
+      [
+       "FM",
+       "Krauchi Romero, Martin",
+       "ESP",
+       2403
+      ],
+      [
+       "IM",
+       "Vantika, Agrawal",
+       "IND",
+       2402
+      ],
+      [
+       "IM",
+       "Shohat, Yotam",
+       "ISR",
+       2390
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1488848.aspx?lan=1"
+    },
+    "lastYear": {
+     "edition": "2026 (V)",
+     "players": 394,
+     "gm": 38,
+     "im": 65,
+     "avg": 2198,
+     "winner": "GM Mishra Abhimanyu (USA), 7.5 pts",
+     "top": [
+      [
+       "GM",
+       "Mishra Abhimanyu",
+       "USA",
+       2623,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Mendonca Leon Luke",
+       "IND",
+       2595,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Li Di",
+       "CHN",
+       2556,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Sosa Tomas",
+       "ARG",
+       2544,
+       "7.5"
+      ],
+      [
+       "CM",
+       "Abdsattar Alisher",
+       "KAZ",
+       2185,
+       "7"
+      ],
+      [
+       "IM",
+       "Wu Yixing",
+       "CHN",
+       2343,
+       "7"
+      ],
+      [
+       "GM",
+       "Shirov Alexei",
+       "ESP",
+       2604,
+       "7"
+      ],
+      [
+       "GM",
+       "Iniyan Pa",
+       "IND",
+       2590,
+       "7"
+      ],
+      [
+       "GM",
+       "Fernandez Daniel Howard",
+       "ENG",
+       2528,
+       "7"
+      ],
+      [
+       "GM",
+       "Sankalp Gupta",
+       "IND",
+       2548,
+       "7"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1258116.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1488848.aspx?lan=1",
+     "https://chess-results.com/tnr1258116.aspx?lan=1"
+    ]
+   },
+   "changes": "Real list from chess-results: 81 players, 17 GMs."
+  },
+  "prague-festival-2027": {
+   "updatedAt": "7 Nov 2026",
+   "fields": {
+    "rounds": 9,
+    "tc": "90/40 + 30 min + 30 s"
+   },
+   "details": {
+    "venue": "Don Giovanni Hotel, Prague",
+    "lineupNow": {
+     "asOf": "7 Nov 2026",
+     "count": 12,
+     "gm": 0,
+     "im": 0,
+     "fm": 1,
+     "avg": 1982,
+     "top": [
+      [
+       "CM",
+       "Willim, Michael",
+       "GER",
+       2093
+      ],
+      [
+       "",
+       "Narr, Kevin",
+       "GER",
+       2092
+      ],
+      [
+       "",
+       "Soucek, Andrej",
+       "CZE",
+       2090
+      ],
+      [
+       "FM",
+       "Laith, Kasib",
+       "IRQ",
+       2075
+      ],
+      [
+       "",
+       "Plesek, Jiri",
+       "CZE",
+       2071
+      ],
+      [
+       "",
+       "Smolinski, Wojciech",
+       "POL",
+       2047
+      ],
+      [
+       "",
+       "Bunk, Wolfgang",
+       "GER",
+       1977
+      ],
+      [
+       "",
+       "Daddario, Aayush",
+       "USA",
+       1894
+      ],
+      [
+       "",
+       "Yagiz, Bora",
+       "TUR",
+       1876
+      ],
+      [
+       "",
+       "Hertling, Juergen",
+       "GER",
+       1839
+      ],
+      [
+       "",
+       "Mathisen, Pal Strande",
+       "NOR",
+       1750
+      ],
+      [
+       "",
+       "Iosava, Otat",
+       "UKR",
+       0
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1518242.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1518242.aspx?lan=1"
+    ]
+   },
+   "changes": "Section D on chess-results: 18–26 Feb, 9 rounds, 12 players so far."
+  },
+  "teplice-2027": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lastYear": {
+     "edition": "2026 Group A",
+     "players": 81,
+     "gm": 4,
+     "im": 5,
+     "avg": 2107,
+     "winner": "IM Vykouk, Jan (CZE), 8 pts",
+     "top": [
+      [
+       "IM",
+       "Vykouk, Jan",
+       "CZE",
+       2487,
+       "8"
+      ],
+      [
+       "GM",
+       "Pultinevicius, Paulius",
+       "LTU",
+       2562,
+       "7.5"
+      ],
+      [
+       "WGM",
+       "Ouellet, Maili-Jade",
+       "CAN",
+       2278,
+       "7"
+      ],
+      [
+       "GM",
+       "Stocek, Jiri",
+       "CZE",
+       2482,
+       "6.5"
+      ],
+      [
+       "FM",
+       "Vojta, Jakub",
+       "CZE",
+       2308,
+       "6.5"
+      ],
+      [
+       "IM",
+       "Llaneza Vega, Marcos",
+       "ESP",
+       2361,
+       "6"
+      ],
+      [
+       "GM",
+       "Sengupta, Deep",
+       "IND",
+       2488,
+       "6"
+      ],
+      [
+       "FM",
+       "Dahl, Christoph",
+       "GER",
+       2395,
+       "6"
+      ],
+      [
+       "CM",
+       "Borischik, Sergey",
+       "POL",
+       2114,
+       "6"
+      ],
+      [
+       "FM",
+       "Rekuc, Patryk",
+       "POL",
+       2198,
+       "6"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1292831.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1292831.aspx?lan=1"
+    ]
+   },
+   "changes": "Last year results added from chess-results."
+  },
+  "czech-open-2027": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lastYear": {
+     "edition": "2026 Group A",
+     "players": 221,
+     "gm": 17,
+     "im": 24,
+     "avg": 2213,
+     "winner": "GM Vogel, Roven (GER), 7.5 pts",
+     "top": [
+      [
+       "GM",
+       "Vogel, Roven",
+       "GER",
+       2499,
+       "7.5"
+      ],
+      [
+       "FM",
+       "Smolik, Jachym",
+       "CZE",
+       2373,
+       "7.5"
+      ],
+      [
+       "IM",
+       "Vykouk, Jan",
+       "CZE",
+       2504,
+       "7"
+      ],
+      [
+       "GM",
+       "Annaberdiyev, Meylis",
+       "TKM",
+       2427,
+       "7"
+      ],
+      [
+       "GM",
+       "Shyam, Sundar M.",
+       "IND",
+       2478,
+       "7"
+      ],
+      [
+       "IM",
+       "Aswath, S",
+       "IND",
+       2517,
+       "7"
+      ],
+      [
+       "FM",
+       "Sernecki, Franciszek",
+       "POL",
+       2281,
+       "7"
+      ],
+      [
+       "GM",
+       "Korobov, Anton",
+       "UKR",
+       2621,
+       "6.5"
+      ],
+      [
+       "GM",
+       "Pechac, Jergus",
+       "SVK",
+       2539,
+       "6.5"
+      ],
+      [
+       "GM",
+       "Moroni, Luca Jr",
+       "ITA",
+       2551,
+       "6.5"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1357472.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1357472.aspx?lan=1"
+    ]
+   },
+   "changes": "Last year results added from chess-results."
+  },
+  "euro-ind-2027": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lastYear": {
+     "edition": "2026 (Katowice)",
+     "players": 501,
+     "gm": 95,
+     "im": 98,
+     "avg": 2260,
+     "winner": "IM Dehtiarov, Roman, 9 pts",
+     "top": [
+      [
+       "IM",
+       "Dehtiarov, Roman",
+       "",
+       2452,
+       "9"
+      ],
+      [
+       "GM",
+       "Abasov, Nijat",
+       "",
+       2586,
+       "8.5"
+      ],
+      [
+       "GM",
+       "Suleymanli, Aydin",
+       "",
+       2653,
+       "8.5"
+      ],
+      [
+       "GM",
+       "Muradli, Mahammad",
+       "",
+       2605,
+       "8.5"
+      ],
+      [
+       "GM",
+       "Gurel, Ediz",
+       "",
+       2635,
+       "8"
+      ],
+      [
+       "GM",
+       "Anton Guijarro, David",
+       "",
+       2656,
+       "8"
+      ],
+      [
+       "GM",
+       "Iturrizaga Bonelli, Eduardo",
+       "",
+       2575,
+       "8"
+      ],
+      [
+       "GM",
+       "Donchenko, Alexander",
+       "",
+       2642,
+       "8"
+      ],
+      [
+       "GM",
+       "Hovhannisyan, Robert",
+       "",
+       2621,
+       "8"
+      ],
+      [
+       "GM",
+       "Kacharava, Nikolozi",
+       "",
+       2500,
+       "8"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1388808.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1388808.aspx?lan=1"
+    ]
+   },
+   "changes": "Last year results added from chess-results."
+  },
+  "tsaghkadzor-2027": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lastYear": {
+     "edition": "2026 Group A",
+     "players": 83,
+     "gm": 2,
+     "im": 8,
+     "avg": 2146,
+     "winner": "IM Davtyan Arsen (ARM), 7.5 pts",
+     "top": [
+      [
+       "IM",
+       "Davtyan Arsen",
+       "ARM",
+       2454,
+       "7.5"
+      ],
+      [
+       "",
+       "Sviridov Valery",
+       "RUS",
+       2436,
+       "7.5"
+      ],
+      [
+       "IM",
+       "Gasparyan Erik R.",
+       "ARM",
+       2447,
+       "7"
+      ],
+      [
+       "FM",
+       "Torosyan Volodya",
+       "ARM",
+       2330,
+       "6.5"
+      ],
+      [
+       "CM",
+       "Petukhov Dmitriy",
+       "RUS",
+       2321,
+       "6"
+      ],
+      [
+       "GM",
+       "Babujian Levon",
+       "ARM",
+       2329,
+       "6"
+      ],
+      [
+       "IM",
+       "Poormosavi Seyed Kian",
+       "IRI",
+       2410,
+       "6"
+      ],
+      [
+       "FM",
+       "Chaqryan Erik",
+       "ARM",
+       2353,
+       "6"
+      ],
+      [
+       "",
+       "Maghakyan Hayk",
+       "ARM",
+       2118,
+       "6"
+      ],
+      [
+       "IM",
+       "Barseghyan Armen Ar.",
+       "ARM",
+       2313,
+       "6"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1502474.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1502474.aspx?lan=1"
+    ]
+   },
+   "changes": "Last year results added from chess-results."
+  },
+  "grenke-2027": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lastYear": {
+     "edition": "2026 A-Open",
+     "players": 998,
+     "gm": 28,
+     "im": 67,
+     "avg": 2145,
+     "winner": "IM Suyarov, Mukhammadzokhid (UZB), 8 pts",
+     "top": [
+      [
+       "IM",
+       "Suyarov, Mukhammadzokhid",
+       "UZB",
+       2514,
+       "8"
+      ],
+      [
+       "GM",
+       "Horvath, Dominik",
+       "AUT",
+       2541,
+       "8"
+      ],
+      [
+       "GM",
+       "Zeng, Chongsheng",
+       "CHN",
+       2546,
+       "8"
+      ],
+      [
+       "GM",
+       "Hong, Andrew",
+       "USA",
+       2598,
+       "7.5"
+      ],
+      [
+       "IM",
+       "Koellner, Ruben Gideon",
+       "GER",
+       2506,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Moussard, Jules",
+       "FRA",
+       2598,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Eljanov, Pavel",
+       "UKR",
+       2682,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Kunin, Vitaly",
+       "GER",
+       2506,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Amar, Elham",
+       "NOR",
+       2586,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Xiao, Tong(QD)",
+       "CHN",
+       2555,
+       "7"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1384882.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1384882.aspx?lan=1"
+    ]
+   },
+   "changes": "Last year results added from chess-results."
+  },
+  "biel-2027": {
+   "updatedAt": "7 Nov 2026",
+   "details": {
+    "lastYear": {
+     "edition": "2026 Master Open",
+     "players": 94,
+     "gm": 8,
+     "im": 8,
+     "avg": 2143,
+     "winner": "IM Gloeckler, Christian (GER), 8 pts",
+     "top": [
+      [
+       "IM",
+       "Gloeckler, Christian",
+       "GER",
+       2506,
+       "8"
+      ],
+      [
+       "IM",
+       "Cao, Qingfeng",
+       "CHN",
+       2365,
+       "7.5"
+      ],
+      [
+       "GM",
+       "Kozak, Adam",
+       "HUN",
+       2531,
+       "7.5"
+      ],
+      [
+       "IM",
+       "Aronyak, Ghosh",
+       "IND",
+       2549,
+       "7"
+      ],
+      [
+       "GM",
+       "Alexakis, Dimitris",
+       "GRE",
+       2525,
+       "7"
+      ],
+      [
+       "GM",
+       "Gopal, G.N.",
+       "IND",
+       2529,
+       "7"
+      ],
+      [
+       "IM",
+       "Savitha, Shri B",
+       "IND",
+       2368,
+       "7"
+      ],
+      [
+       "GM",
+       "Ghosh, Diptayan",
+       "IND",
+       2554,
+       "7"
+      ],
+      [
+       "IM",
+       "Elmi, Saad Abobaker",
+       "NOR",
+       2399,
+       "7"
+      ],
+      [
+       "GM",
+       "Acs, Peter",
+       "HUN",
+       2561,
+       "6.5"
+      ]
+     ],
+     "source": "https://chess-results.com/tnr1451903.aspx?lan=1"
+    },
+    "sources": [
+     "https://chess-results.com/tnr1451903.aspx?lan=1"
+    ]
+   },
+   "changes": "Last year results added from chess-results."
   }
  }
 }
