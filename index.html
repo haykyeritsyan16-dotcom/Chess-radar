@@ -1063,6 +1063,10 @@ body.sd-lock { overflow: hidden; }
 .sd-calc .sd-muted { grid-column: 1 / -1; }
 .sd-src { margin: 0; padding-left: 18px; font-size: 12px; } .sd-src a { color: #60a5fa; word-break: break-all; }
 
+/* Real-data-only app: hide the old screens built on example data */
+.sidebar, .topbar-right, .data-warning { display: none !important; }
+.content-area { padding-bottom: calc(24px + env(safe-area-inset-bottom)) !important; }
+
 </style>
 
   <div class="app-container">
@@ -2424,6 +2428,8 @@ let appState = {
 // Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
   initEventListeners();
+  // Only the Season Calendar uses real data; the old screens are hidden.
+  switchView('calendar');
   loadProfile();
   loadTournaments();
   loadNews();
@@ -3634,7 +3640,13 @@ function renderCalendarView() {
   const filter = appState.seasonFilter || 'all';
 
   const groups = {};
-  season.forEach(t => { (groups[t.month] = groups[t.month] || []).push(t); });
+  const today = new Date().toISOString().slice(0, 10);
+  season.forEach(t => {
+    if (t.status !== 'gap' && !t.approx && t.end < today) return; // already finished
+    if (/too late to enter/i.test(t.note || '')) return;
+    (groups[t.month] = groups[t.month] || []).push(t);
+  });
+  Object.values(groups).forEach(g => g.sort((a, b) => (a.status === 'gap') - (b.status === 'gap') || (a.start > b.start ? 1 : -1)));
 
   let html = `
     <div class="season-intro">
