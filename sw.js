@@ -1,5 +1,5 @@
 // Offline support: try the network first, fall back to the last saved copy.
-const CACHE = 'chess-radar-v7';
+const CACHE = 'chess-radar-v8';
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./', 'index.html', 'manifest.webmanifest', 'icon-192.png'])).then(() => self.skipWaiting()));
 });
