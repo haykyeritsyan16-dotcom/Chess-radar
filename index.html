@@ -1097,6 +1097,7 @@ body.sd-lock { overflow: hidden; }
 .sd-cost-total2 { border-top: none; padding-top: 0; font-size: 15px; color: #93c5fd; }
 .sd-fl { align-items: flex-start; padding: 6px 0; border-bottom: 1px dashed #334155; }
 .sd-fl:last-of-type { border-bottom: none; }
+.sd-org { border-color: #a16207 !important; background: rgba(161,98,7,.08); }
 
 </style>
 
@@ -2113,7 +2114,7 @@ window.SEASON = [
     note: '4 tournaments over 10 days. The 2026 Open had 9 rounds. Needs an Irish visa.', url: 'https://www.discoverireland.ie/sligo/sligo-chess-and-culture-festival-2027' },
 
   // ---------------- FEBRUARY 2027 ----------------
-  { id: "vardaris-2027", details: {"airport": "SKG", "airportCity": "Thessaloniki"}, month: '2027-02', name: '10th Vardaris Open', city: 'Thessaloniki', country: 'Greece', start: '2027-02-11', end: '2027-02-15', rounds: null, status: 'confirmed',
+  { id: "vardaris-2027", details: {"airport": "SKG", "airportCity": "Thessaloniki"}, month: '2027-03', name: '10th Vardaris Open', city: 'Thessaloniki', country: 'Greece', start: '2027-03-11', end: '2027-03-15', rounds: null, status: 'confirmed',
     note: 'Only 5 days, so it probably has fewer than 9 rounds. Check before you plan around a norm.', url: 'https://theweekinchess.com/chess-calendar' },
   { id: "graz-2027", details: {"airport": "VIE", "airportCity": "Vienna (or Graz GRZ)", "venue": "Wirtschaftskammer Graz, Körblergasse 111 (2025 venue)", "lastYear": {"edition": "2026", "players": 132, "avg": 2309, "winner": "Leaders on 7.5: GM Lalith Babu M R (2511) and IM Loïc Travadon (2483)", "top": [["GM", "Lalith Babu M R", "IND", 2511, "7.5"], ["IM", "Loïc Travadon", "FRA", 2483, "7.5"]], "source": "https://www.365chess.com/tournaments/graz_open_a_2026_2026/47610"}}, month: '2027-02', name: 'International Chess Open Graz (Open A)', city: 'Graz', country: 'Austria', start: '2027-02-14', end: '2027-02-20', rounds: 9, tc: '90/40 + 15 min + 30 s', status: 'confirmed', pick: true,
     note: 'Strong field: Open A 2026 had 132 players with an average rating of 2309, right at your level.', url: 'https://www.365chess.com/tournaments/graz_open_a_2026_2026/47610' },
@@ -2330,25 +2331,34 @@ window.SEASON = [
     }
     html += `<div class="sd-cost-row"><div><b>🎟 Entry fee</b><br><span class="sd-muted">${esc(c.feeNote || '')}</span></div><div class="sd-cost-amt">${c.fee == null ? '?' : eur(c.fee)}</div></div>`;
     const fh = hand ? hand.price : 0, fc = chk ? chk.price : null;
+    if (c.venue) html += `<div class="sd-muted" style="margin:6px 0 2px">📍 Playing hall: <b>${esc(c.venue)}</b></div>`;
     if (c.hotels && c.hotels.length) {
-      c.hotels.forEach((h, i) => {
+      let bi = 0;
+      c.hotels.forEach((h) => {
         const days = h.nights + 1;
         const foodCost = h.meals === 'full board' ? 0 : h.meals === 'half board' ? 10 * days : h.meals === 'breakfast' ? 15 * days : 25 * days;
-        const base = h.total + fee + foodCost;
-        html += `<div class="sd-cost-opt">
-          <div class="sd-cost-opt-h">🏨 Hotel ${i + 1}: ${esc(h.name)}${h.score ? ` <span class="sd-muted">★ ${h.score}</span>` : ''}</div>
-          <div class="sd-muted">${h.nights} nights · ${mealsLabel[h.meals] || esc(h.meals)}</div>
-          <div class="sd-cost-line"><span>Single room (1 person)</span><span>${eur(h.total)}</span></div>
-          ${h.double ? `<div class="sd-cost-line"><span>Double room (2 people)</span><span>${eur(h.double)} <span class="sd-muted">(${eur(h.double / 2)} each)</span></span></div>` : ''}
-          <div class="sd-cost-line"><span>🍽 Food estimate</span><span>${eur(foodCost)}</span></div>
+        const head = h.org ? `📋 Organiser hotel: ${esc(h.name)}` : `🏨 Booking ${++bi}: ${esc(h.name)}${h.score ? ` <span class="sd-muted">★ ${h.score}</span>` : ''}`;
+        const distTxt = h.dist == null ? '' : h.dist <= 30 ? ' · in the playing hall' : h.dist <= 1000 ? ` · ${h.dist} m from the hall` : ` · ${(h.dist / 1000).toFixed(1)} km from the hall (nothing closer)`;
+        let body = `<div class="sd-muted">${h.nights} nights · ${mealsLabel[h.meals] || 'meals: ask organiser'}${distTxt}</div>`;
+        if (h.total == null && h.double == null) {
+          body += `<div class="sd-cost-line"><span>Price</span><span class="sd-muted">on request</span></div>`;
+        } else {
+          if (h.total != null) body += `<div class="sd-cost-line"><span>Single room (1 person)</span><span>${eur(h.total)}</span></div>`;
+          if (h.double != null) body += `<div class="sd-cost-line"><span>Double room (2 people)</span><span>${eur(h.double)} <span class="sd-muted">(${eur(h.double / 2)} each)</span></span></div>`;
+        }
+        if (h.note) body += `<div class="sd-muted">${esc(h.note)}</div>`;
+        if (h.total != null) {
+          const base = h.total + fee + foodCost;
+          body += `<div class="sd-cost-line"><span>🍽 Food estimate</span><span>${eur(foodCost)}</span></div>
           <div class="sd-cost-total"><span>Total 🎒 hand bag</span><span>${eur(base + fh)}${c.fee == null ? ' + entry' : ''}</span></div>
-          ${fc ? `<div class="sd-cost-total sd-cost-total2"><span>Total 🧳 with checked bag</span><span>${eur(base + fc)}${c.fee == null ? ' + entry' : ''}</span></div>` : ''}
-        </div>`;
+          ${fc ? `<div class="sd-cost-total sd-cost-total2"><span>Total 🧳 with checked bag</span><span>${eur(base + fc)}${c.fee == null ? ' + entry' : ''}</span></div>` : ''}`;
+        }
+        html += `<div class="sd-cost-opt${h.org ? ' sd-org' : ''}"><div class="sd-cost-opt-h">${head}</div>${body}</div>`;
       });
     } else if (!c.noFlight) {
       html += `<p class="sd-muted">No hotel price yet. Use the Booking.com button below.</p>`;
     }
-    html += `<p class="sd-muted">Checked ${esc(c.checked)}. Totals use the single room. Hotels: Booking.com. Food is an estimate (€25/day, €15 with breakfast). ${c.note ? esc(c.note) : ''} Prices change daily — check the live buttons before booking.</p>`;
+    html += `<p class="sd-muted">Checked ${esc(c.checked)}. Totals use the single room. Organiser hotels come from the regulations; other hotels from Booking.com, closest to the playing hall. Food is an estimate (€25/day, €15 with breakfast). ${c.note ? esc(c.note) : ''} Prices change daily — check the live buttons before booking.</p>`;
     html += '</div>';
     return html;
   }
