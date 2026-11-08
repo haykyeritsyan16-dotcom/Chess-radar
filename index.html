@@ -1080,7 +1080,8 @@ body.sd-lock { overflow: hidden; }
 .sd-cost-opt { border: 1px solid #334155; border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 5px; background: #0b1120; }
 .sd-cost-opt-h { font-weight: 700; color: #fff; font-size: 13.5px; }
 .sd-cost-line { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: #cbd5e1; font-variant-numeric: tabular-nums; }
-.sd-cost-line span:last-child, .sd-cost-total span:last-child { white-space: nowrap; }
+.sd-cost-line > span:last-child, .sd-cost-total > span:last-child { white-space: nowrap; }
+.sd-fl > span:first-child { flex: 1; min-width: 0; padding-right: 8px; }
 .sd-cost-total { display: flex; justify-content: space-between; border-top: 1px solid #334155; padding-top: 6px; margin-top: 2px; font-size: 16px; font-weight: 800; color: var(--gold-light, #fbbf24); font-variant-numeric: tabular-nums; }
 .season-chip.cost { color: #fde68a; border-color: rgba(250,204,21,.4); background: rgba(250,204,21,.08); }
 
@@ -1093,6 +1094,9 @@ body.sd-lock { overflow: hidden; }
 .season-card .season-chips { margin-top: 2px; }
 .season-intro { margin-bottom: 4px; }
 #view-calendar .radar-card-header, #view-calendar .radar-card > h2, #view-calendar .radar-card > .radar-card-header { display: none; }
+.sd-cost-total2 { border-top: none; padding-top: 0; font-size: 15px; color: #93c5fd; }
+.sd-fl { align-items: flex-start; padding: 6px 0; border-bottom: 1px dashed #334155; }
+.sd-fl:last-of-type { border-bottom: none; }
 
 </style>
 
@@ -2078,7 +2082,7 @@ body.sd-lock { overflow: hidden; }
 // Classical season calendar, researched 7 Nov 2026.
 // status "confirmed" = organiser or calendar has published these dates.
 // status "expected"  = 2027 dates not published yet; the dates shown are from the 2026 edition.
-window.SEASON_CHECKED = '7 Nov 2026';
+window.SEASON_CHECKED = '8 Nov 2026';
 window.SEASON = [
   // ---------------- NOVEMBER 2026 ----------------
   { id: "hradec-2026", details: {"airport": "PRG", "airportCity": "Prague"}, month: '2026-11', name: '16th Hradec Králové Open', city: 'Hradec Králové', country: 'Czech Republic', start: '2026-11-07', end: '2026-11-14', rounds: null, status: 'confirmed',
@@ -2139,8 +2143,6 @@ window.SEASON = [
     note: 'Usually held around Easter. The 2027 dates are not announced yet.', url: 'https://www.365chess.com/tournaments/Fagernes_GM_Open_2026_2026/47687' },
 
   // ---------------- MAY 2027 ----------------
-  { month: '2027-05', name: 'No strong open confirmed yet', city: '', country: '', start: '2027-05-01', end: '2027-05-31', rounds: null, status: 'gap',
-    note: 'No major classical open in Europe has announced May 2027 dates yet. Use May to prepare for the European Championship in June.', url: '' },
 
   // ---------------- JUNE 2027 ----------------
   { id: "euro-ind-2027", details: {"airport": "BUS", "airportCity": "Batumi"}, month: '2027-06', name: 'European Individual Chess Championship 2027', city: 'Batumi', country: 'Georgia', start: '2027-06-10', end: '2027-06-23', rounds: null, status: 'confirmed', pick: true,
@@ -2165,8 +2167,6 @@ window.SEASON = [
     note: 'A 10-round classical open in late August. The 2027 dates are not announced yet.', url: 'https://en.chessbase.com/post/upcoming-tournaments-and-events-3' },
 
   // ---------------- SEPTEMBER 2027 ----------------
-  { month: '2027-09', name: 'No strong open confirmed yet', city: '', country: '', start: '2027-09-01', end: '2027-09-30', rounds: null, status: 'gap',
-    note: 'No well-known European classical open has published September 2027 dates yet. Check again in spring 2027.', url: '' },
 
   // ---------------- OCTOBER 2027 ----------------
   { id: 'menton-2027', details: {"airport":"NCE","airportCity":"Nice (then 30 min by train to Menton)"}, month: '2027-10', name: 'Menton International Open', city: 'Menton', country: 'France', start: '2027-10-17', end: '2027-10-24', rounds: null, status: 'expected', approx: true,
@@ -2180,7 +2180,50 @@ window.SEASON = [
   { id: "benidorm-2027", details: {"airport": "ALC", "airportCity": "Alicante", "venue": "Hotel Meliá Benidorm (2026)"}, month: '2027-10', name: 'Benidorm Chess Open (Open A)', city: 'Benidorm', country: 'Spain', start: '2027-10-24', end: '2027-10-31', rounds: 9, tc: '90 min + 30 s', status: 'expected',
     note: 'Dates estimated from 2026 (25 October – 1 November). 2026 prize fund: €25,510.', url: 'https://www.eldebate.com/espana/comunidad-valenciana/20260724/benidorm-chess-open-apunta-hacia-sexta-edicion_443137.html' },
   { id: "tegernsee-2027", details: {"airport": "MUC", "airportCity": "Munich"}, month: '2027-10', name: 'OIBM Tegernsee Open', city: 'Bad Wiessee', country: 'Germany', start: '2027-10-30', end: '2027-11-08', rounds: null, status: 'expected',
-    note: 'Dates estimated from 2026 (31 October – 9 November).', url: 'https://theweekinchess.com/chess-calendar' }
+    note: 'Dates estimated from 2026 (31 October – 9 November).', url: 'https://theweekinchess.com/chess-calendar' },
+  // ---------------- Added 8 Nov 2026 from chess-calendar.eu + organiser sites ----------------
+  { id: "yerevan-2026", details: {"airportCity": "No flight needed: it is in Yerevan.", "venue": "Tigran Petrosyan Chess House, 50 Khanjyan St, Yerevan (2024 venue)", "fee": "About 45,000 AMD (2024: 40,000 + 5,000 federation fee; 50,000 + 5,000 if late).", "tc": "90 min + 30 s from move 1. 9 rounds.", "sources": ["https://doc.fide.com/docs/CALENDAR/2024/6th_Yerevan_Open_Regulations.pdf"]}, month: '2026-12', name: "8th Yerevan Open", city: "Yerevan", country: 'Armenia', start: '2026-12-04', end: '2026-12-10', rounds: 9, status: 'confirmed', pick: true,
+    note: "At home: no flight, no hotel. Strong Armenian field, good for rating.", url: "https://chessfed.am/" },
+  { id: "roma-2026", details: {"airport": "FCO", "airportCity": "Rome Fiumicino (train to the city)", "venue": "Hotel Eurostars Roma Aeterna, Piazza del Pigneto 9A, Rome", "schedule": "R1 Sun 6 Dec 17:00 · double round Tue 8 Dec · R9 Sun 13 Dec 09:00.", "fee": "Master (2000+): €110 until 10 Oct, €130 until 30 Nov, €150 after 1 Dec. Free for 2400+ if early.", "prize": "1st €1,300, 2nd €1,000, 3rd €800. Best U2300 €400.", "tc": "90 min/40 + 30 min, +30 s from move 1. 9 rounds.", "sources": ["https://chessmail.com/assets/pdfs/Roma bando 2026.pdf"]}, month: '2026-12', name: "Roma Città Aperta (Master)", city: "Rome", country: 'Italy', start: '2026-12-06', end: '2026-12-13', rounds: 9, status: 'confirmed',
+    note: "9 rounds in 8 days. Fee goes up after 30 Nov.", url: "https://chessmail.com/assets/pdfs/Roma bando 2026.pdf" },
+  { id: "wien-advent-2026", details: {"airport": "VIE", "airportCity": "Vienna"}, month: '2026-12', name: "Wiener Advent Open", city: "Vienna", country: 'Austria', start: '2026-12-07', end: '2026-12-13', rounds: null, status: 'confirmed',
+    note: "7-day open in Vienna. Fee: see regulations.", url: "https://chess-calendar.eu/" },
+  { id: "riga-2026", details: {"airport": "RIX", "airportCity": "Riga"}, month: '2026-12', name: "Riga Christmas Chess Festival", city: "Riga", country: 'Latvia', start: '2026-12-14', end: '2026-12-20', rounds: null, status: 'confirmed',
+    note: "Cheap hotels. Fee: see regulations.", url: "https://chess-calendar.eu/" },
+  { id: "wroclaw-2026", details: {"airport": "WRO", "airportCity": "Wrocław", "prize": "Prize fund 45,650 zł (about €10,700)."}, month: '2026-12', name: "Wrocław Chess Festival", city: "Wrocław", country: 'Poland', start: '2026-12-14', end: '2026-12-20', rounds: null, status: 'confirmed',
+    note: "Big prize fund. Flights are long (no good connection).", url: "https://chess-calendar.eu/" },
+  { id: "cracovia-2026", details: {"airport": "KRK", "airportCity": "Kraków", "venue": "Galaxy Hotel, Kraków (2024 venue)", "fee": "About €12 cheaper if you pay by mid-December. Free for GMs/WGMs.", "sources": ["https://fide.com/calendar/54469"]}, month: '2026-12', name: "XXXVII Cracovia Festival (Open A)", city: "Kraków", country: 'Poland', start: '2026-12-27', end: '2027-01-04', rounds: 9, status: 'confirmed', pick: true,
+    note: "Classic New Year 9-round open with many titled players.", url: "https://www.cracoviachess.net/" },
+  { id: "palmanova-2026", details: {"airport": "VCE", "airportCity": "Venice (then about 1 h 15 by train/bus to Palmanova)"}, month: '2026-12', name: "15th Palmanova Festival (Master 2000+)", city: "Palmanova", country: 'Italy', start: '2026-12-27', end: '2027-01-03', rounds: null, status: 'confirmed',
+    note: "Italian New Year festival, Master group for 2000+.", url: "https://chess-calendar.eu/" },
+  { id: "sevilla-2027", details: {"airport": "SVQ", "airportCity": "Seville", "venue": "FIBES Palacio de Congresos, Seville", "sources": ["https://fide.com/calendar/54422"]}, month: '2027-01', name: "52nd Sevilla International Open", city: "Seville", country: 'Spain', start: '2027-01-08', end: '2027-01-16', rounds: 9, status: 'confirmed', pick: true,
+    note: "Strong 9-round open, often 15–20 GMs.", url: "https://sevillaopenajedrez.com/" },
+  { id: "pamplona-2027", details: {"airport": "BIO", "airportCity": "Bilbao (then about 2 h by bus to Pamplona)", "venue": "Hotel NH Iruña Park, Pamplona"}, month: '2027-02', name: "II Pamplona International", city: "Pamplona", country: 'Spain', start: '2027-02-06', end: '2027-02-13', rounds: null, status: 'confirmed',
+    note: "Played in the hotel. Fee: see regulations.", url: "https://chess-calendar.eu/" },
+  { id: "lienz-2027", details: {"airport": "MUC", "airportCity": "Munich (then about 4 h by train to Lienz)"}, month: '2027-02', name: "23rd DolomitenBank Lienz Open", city: "Lienz", country: 'Austria', start: '2027-02-13', end: '2027-02-20', rounds: null, status: 'confirmed',
+    note: "Nice mountain town; long train from the airport.", url: "https://chess-calendar.eu/" },
+  { id: "badwoerishofen-2027", details: {"airport": "MUC", "airportCity": "Munich (then about 1.5 h by train)", "schedule": "R1 Fri 5 Mar 15:00 · R2–R8 daily 14:00 · R9 Sat 13 Mar 10:00. One half-point bye in R1–6.", "sources": ["https://www.chessorg.de/bad_woerishofen.php?lang=en"]}, month: '2027-03', name: "ChessOrg Festival Bad Wörishofen (A-Open)", city: "Bad Wörishofen", country: 'Germany', start: '2027-03-05', end: '2027-03-13', rounds: 9, status: 'confirmed', pick: true,
+    note: "9 rounds, one game per day. Usually many GMs.", url: "https://www.chessorg.de/bad_woerishofen.php?lang=en" },
+  { id: "novybor-2027", details: {"airport": "PRG", "airportCity": "Prague (then about 2 h by bus to Nový Bor)", "fee": "Czech Tour: open group usually about €45, FMs get a discount."}, month: '2027-03', name: "5th Nový Bor Open (A)", city: "Nový Bor", country: 'Czech Republic', start: '2027-03-13', end: '2027-03-20', rounds: 9, status: 'confirmed',
+    note: "Czech Tour event. Direct Wizz Air flight to Prague.", url: "https://www.czechtour.net/" },
+  { id: "pilsen-2027", details: {"airport": "PRG", "airportCity": "Prague (then 1.5 h by train to Plzeň)", "venue": "Parkhotel Plzeň", "fee": "2025: Open C €47 (€31 if you stay at the organiser hotel), FM 25% off. IM round robin B €188.", "hotels": [{"name": "Parkhotel Plzeň (organiser)", "price": 71, "unit": "single/night with breakfast (2025)", "note": "Double €83.50 per room/night."}], "sources": ["https://ajedrezenmadrid.com/torneos/2025/25_pilsen.pdf"]}, month: '2027-03', name: "15th Pilsen Open (Open C / IM RR)", city: "Plzeň", country: 'Czech Republic', start: '2027-03-21', end: '2027-03-28', rounds: 9, status: 'confirmed', pick: true,
+    note: "Cheap Czech Tour event; also IM round robin for norms.", url: "https://www.czechtour.net/" },
+  { id: "meran-2027", details: {"airport": "VRN", "airportCity": "Verona (then about 2.5 h by train to Merano)"}, month: '2027-04', name: "Gold-Cup Meran", city: "Merano", country: 'Italy', start: '2027-04-09', end: '2027-04-17', rounds: 9, status: 'confirmed',
+    note: "Easter open in South Tyrol. Fee: see regulations.", url: "https://chess-calendar.eu/" },
+  { id: "kufstein-2027", details: {"airport": "MUC", "airportCity": "Munich (then about 1.5 h by train)"}, month: '2027-05', name: "Chess Fortress Kufstein (Open A)", city: "Kufstein", country: 'Austria', start: '2027-05-03', end: '2027-05-09', rounds: 7, status: 'confirmed',
+    note: "The only good classical open in May found so far.", url: "https://chess-calendar.eu/" },
+  { id: "forni-2027", details: {"airport": "VCE", "airportCity": "Venice (then about 2.5 h by car/bus)"}, month: '2027-06', name: "18th Dolomiti Open", city: "Forni di Sopra", country: 'Italy', start: '2027-06-05', end: '2027-06-12', rounds: null, status: 'confirmed',
+    note: "Mountain village. Before the European Championship.", url: "https://chess-calendar.eu/" },
+  { id: "stveit-2027", details: {"airport": "VIE", "airportCity": "Vienna (then about 3.5 h by train) or Klagenfurt"}, month: '2027-07', name: "46th St. Veit Open", city: "St. Veit an der Glan", country: 'Austria', start: '2027-07-10', end: '2027-07-17', rounds: null, status: 'confirmed',
+    note: "Summer open in Carinthia. Hotels are expensive in July.", url: "https://chess-calendar.eu/" },
+  { id: "faakersee-2027", details: {"airport": "VIE", "airportCity": "Vienna (then about 4 h by train) or Ljubljana"}, month: '2027-08', name: "43rd Faaker See Open", city: "Latschach (Faak am See)", country: 'Austria', start: '2027-08-07', end: '2027-08-14', rounds: null, status: 'confirmed',
+    note: "Lake resort; summer hotels are expensive.", url: "https://chess-calendar.eu/" },
+  { id: "spilimbergo-2027", details: {"airport": "VCE", "airportCity": "Venice (then about 1.5 h)"}, month: '2027-08', name: "25th Spilimbergo International", city: "Spilimbergo", country: 'Italy', start: '2027-08-08', end: '2027-08-15', rounds: null, status: 'confirmed',
+    note: "Few hotels in town; book early.", url: "https://chess-calendar.eu/" },
+  { id: "tenkes-2027", details: {"airport": "BUD", "airportCity": "Budapest (then about 3 h by train/bus to Harkány)"}, month: '2027-08', name: "50th Tenkes Cup", city: "Harkány", country: 'Hungary', start: '2027-08-24', end: '2027-08-30', rounds: null, status: 'confirmed',
+    note: "Spa town, cheap hotels with breakfast.", url: "https://chess-calendar.eu/" },
+  { id: "trieste-2027", details: {"airport": "TRS", "airportCity": "Trieste (or Venice, 2 h by train)"}, month: '2027-09', name: "29th Trieste International Festival", city: "Trieste", country: 'Italy', start: '2027-09-04', end: '2027-09-10', rounds: null, status: 'confirmed',
+    note: "The only September open found so far.", url: "https://chess-calendar.eu/" },
 ];
 
 // Tournament detail sheet for the Season Calendar, plus daily-update overlay from the artifact database.
@@ -2270,30 +2313,42 @@ window.SEASON = [
     const c = t.details && t.details.cost;
     if (!c) return '';
     const eur = n => '€' + Math.round(n).toLocaleString('en-US');
-    const food = 25;
-    const f = c.flight;
-    const days = (h) => h.nights + 1;
-    const mealsLabel = { 'full board': 'all meals included', 'breakfast': 'breakfast included', 'none': 'no meals' };
+    const f = c.flight || null;
+    const hand = f ? (f.hand || (f.price ? { price: f.price, airline: f.airline, stops: f.stops, durO: f.duration } : null)) : null;
+    const chk = f ? f.checked : null;
+    const fee = c.fee || 0;
+    const mealsLabel = { 'full board': 'all meals included', 'half board': 'breakfast + dinner', 'breakfast': 'breakfast included', 'none': 'no meals' };
+    const fl = (label, x, alt) => x ? `<div class="sd-cost-line sd-fl"><span><b>${label}</b><br><span class="sd-muted">${esc(x.airline)} · ${esc(x.stops)} · there ${esc(x.durO || '')}${x.durI ? ', back ' + esc(x.durI) : ''}${x.tOut ? '<br>Out ' + esc(x.tOut) + ' · Back ' + esc(x.tBack) : ''}${alt ? '<br>Cheapest: ' + eur(alt.price) + ', ' + esc(alt.airline) + ', ' + esc(alt.durO) + ' / ' + esc(alt.durI || '') : ''}</span></span><span>${eur(x.price)}</span></div>` : '';
     let html = '<div class="sd-cost">';
-    html += `<div class="sd-cost-row sd-cost-flight"><div><b>✈️ Flight</b> Yerevan → ${esc(f.to)}<br><span class="sd-muted">${esc(f.out)} → ${esc(f.back)} · ${esc(f.airline)}, ${esc(f.stops)}, ${esc(f.duration)}${f.alt ? ' · also: ' + esc(f.alt) : ''}</span></div><div class="sd-cost-amt">${eur(f.price)}</div></div>`;
+    if (f && hand) {
+      html += `<div class="sd-cost-opt"><div class="sd-cost-opt-h">✈️ Flight Yerevan → ${esc(f.to)} · ${esc(f.out)} → ${esc(f.back)}</div>`;
+      html += fl('🎒 Hand bag 10 kg', hand, f.handAlt);
+      html += fl('🧳 + Checked bag 20 kg', chk, f.checkedAlt);
+      html += `<div class="sd-muted">Round trip, best mix of price and short travel time. Source: ${esc(f.source || 'Google Flights')}.</div></div>`;
+    } else if (c.noFlight) {
+      html += `<div class="sd-cost-row"><div><b>✈️ Flight</b><br><span class="sd-muted">${esc(c.noFlight)}</span></div><div class="sd-cost-amt">€0</div></div>`;
+    }
     html += `<div class="sd-cost-row"><div><b>🎟 Entry fee</b><br><span class="sd-muted">${esc(c.feeNote || '')}</span></div><div class="sd-cost-amt">${c.fee == null ? '?' : eur(c.fee)}</div></div>`;
+    const fh = hand ? hand.price : 0, fc = chk ? chk.price : null;
     if (c.hotels && c.hotels.length) {
       c.hotels.forEach((h, i) => {
-        const foodCost = h.meals === 'full board' ? 0 : h.meals === 'breakfast' ? 15 * days(h) : food * days(h);
-        const total = f.price + h.total + (c.fee || 0) + foodCost;
+        const days = h.nights + 1;
+        const foodCost = h.meals === 'full board' ? 0 : h.meals === 'half board' ? 10 * days : h.meals === 'breakfast' ? 15 * days : 25 * days;
+        const base = h.total + fee + foodCost;
         html += `<div class="sd-cost-opt">
-          <div class="sd-cost-opt-h">Option ${i + 1}: ${esc(h.name)}</div>
-          <div class="sd-cost-line"><span>🏨 Hotel, ${h.nights} nights (${mealsLabel[h.meals] || esc(h.meals)})</span><span>${eur(h.total)}</span></div>
-          <div class="sd-cost-line"><span>🍽 Food${h.meals === 'full board' ? ' (included)' : h.meals === 'breakfast' ? `, lunch + dinner €15/day × ${days(h)}` : `, €${food}/day × ${days(h)}`}</span><span>${eur(foodCost)}</span></div>
-          <div class="sd-cost-line"><span>✈️ Flight + 🎟 entry</span><span>${eur(f.price + (c.fee || 0))}</span></div>
-          <div class="sd-cost-total"><span>Total</span><span>${eur(total)}${c.fee == null ? ' + entry' : ''}</span></div>
-          <div class="sd-muted">${esc(h.source || '')}</div>
+          <div class="sd-cost-opt-h">🏨 Hotel ${i + 1}: ${esc(h.name)}${h.score ? ` <span class="sd-muted">★ ${h.score}</span>` : ''}</div>
+          <div class="sd-muted">${h.nights} nights · ${mealsLabel[h.meals] || esc(h.meals)}</div>
+          <div class="sd-cost-line"><span>Single room (1 person)</span><span>${eur(h.total)}</span></div>
+          ${h.double ? `<div class="sd-cost-line"><span>Double room (2 people)</span><span>${eur(h.double)} <span class="sd-muted">(${eur(h.double / 2)} each)</span></span></div>` : ''}
+          <div class="sd-cost-line"><span>🍽 Food estimate</span><span>${eur(foodCost)}</span></div>
+          <div class="sd-cost-total"><span>Total 🎒 hand bag</span><span>${eur(base + fh)}${c.fee == null ? ' + entry' : ''}</span></div>
+          ${fc ? `<div class="sd-cost-total sd-cost-total2"><span>Total 🧳 with checked bag</span><span>${eur(base + fc)}${c.fee == null ? ' + entry' : ''}</span></div>` : ''}
         </div>`;
       });
-    } else {
+    } else if (!c.noFlight) {
       html += `<p class="sd-muted">No hotel price yet. Use the Booking.com button below.</p>`;
     }
-    html += `<p class="sd-muted">Prices checked on ${esc(c.checked)} (flights: Google Flights, round trip, economy; hotels: Booking.com, 1 person). Food is an estimate. ${c.note ? esc(c.note) : ''} Flight and hotel prices change daily, so check the live buttons before booking.</p>`;
+    html += `<p class="sd-muted">Checked ${esc(c.checked)}. Totals use the single room. Hotels: Booking.com. Food is an estimate (€25/day, €15 with breakfast). ${c.note ? esc(c.note) : ''} Prices change daily — check the live buttons before booking.</p>`;
     html += '</div>';
     return html;
   }
@@ -2365,8 +2420,9 @@ window.SEASON = [
       </div>
       <p class="sd-muted">Live prices for these exact dates. Prices change daily, so check right before you book.</p>
       <div class="sd-btns">
-        <a class="sd-btn primary" href="${g(out, back2)}" target="_blank" rel="noopener">Google Flights ↗</a>
+        <a class="sd-btn primary" href="https://www.kiwi.com/en/search/results/yerevan-armenia/${d.airport.toLowerCase()}/${out}/${back2}?bags=1.0" target="_blank" rel="noopener">Kiwi.com ↗</a>
         <a class="sd-btn" href="${sky(out, back2)}" target="_blank" rel="noopener">Skyscanner ↗</a>
+        <a class="sd-btn" href="${g(out, back2)}" target="_blank" rel="noopener">Google Flights ↗</a>
         <a class="sd-btn" href="${g(out, back1)}" target="_blank" rel="noopener">Night flight back ↗</a>
       </div>`;
   }
@@ -3917,6 +3973,7 @@ async function saveProfileSettings(e) {
 
 
 </script>
+
 
 <script>if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('sw.js'))}</script>
 </body>
