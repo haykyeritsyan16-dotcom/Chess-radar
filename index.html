@@ -1107,6 +1107,7 @@ body.sd-lock { overflow: hidden; }
 .plan-kpis span { display: block; font-size: 20px; font-weight: 800; color: #fbbf24; font-variant-numeric: tabular-nums; }
 .plan-kpis small { font-size: 11px; color: #94a3b8; }
 .plan-warns { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #fecaca; background: rgba(239,68,68,.1); border: 1px solid rgba(239,68,68,.4); border-radius: 8px; padding: 8px 10px; }
+.sd-single { color: #cbd5e1; font-size: 14px; }
 .plan-ok { font-size: 13px; color: #6ee7b7; }
 .plan-rows { display: flex; flex-direction: column; }
 .plan-row { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: #e2e8f0; padding: 6px 0; border-bottom: 1px dashed #334155; font-variant-numeric: tabular-nums; }
@@ -2318,7 +2319,7 @@ window.SEASON = [
     if (!c) return null;
     const f = c.flight;
     const flight = c.noFlight ? 0 : f ? ((f.hand && f.hand.price) || f.price || null) : null;
-    const hs = (c.hotels || []).filter(h => h.total != null).map(h => h.total + (h.meals === 'full board' ? 0 : h.meals === 'half board' ? 10 : h.meals === 'breakfast' ? 15 : 25) * ((h.nights || 0) + 1));
+    const hs = (c.hotels || []).filter(h => h.total != null || h.double != null).map(h => (h.double != null ? h.double / 2 : h.total) + (h.meals === 'full board' ? 0 : h.meals === 'half board' ? 10 : h.meals === 'breakfast' ? 15 : 25) * ((h.nights || 0) + 1));
     const hotel = /yerevan/i.test(t.city || '') ? 0 : hs.length ? Math.min(...hs) : null;
     const fee = c.fee != null ? c.fee : null;
     const missing = [];
@@ -2410,18 +2411,22 @@ window.SEASON = [
           if (h.double != null) body += `<div class="sd-cost-line"><span>Double room (2 people)</span><span>${eur(h.double)} <span class="sd-muted">(${eur(h.double / 2)} each)</span></span></div>`;
         }
         if (h.note) body += `<div class="sd-muted">${esc(h.note)}</div>`;
-        if (h.total != null) {
-          const base = h.total + fee + foodCost;
+        if (h.total != null || h.double != null) {
+          const share = h.double != null ? h.double / 2 : h.total;
+          const shareLbl = h.double != null ? 'sharing a double room' : 'single room';
+          const plus = c.fee == null ? ' + entry' : '';
+          const base = share + fee + foodCost;
           body += `<div class="sd-cost-line"><span>🍽 Food estimate</span><span>${eur(foodCost)}</span></div>
-          <div class="sd-cost-total"><span>${fh ? 'Total 🎒 hand bag' : 'Total'}</span><span>${eur(base + fh)}${c.fee == null ? ' + entry' : ''}</span></div>
-          ${fc ? `<div class="sd-cost-total sd-cost-total2"><span>Total 🧳 with checked bag</span><span>${eur(base + fc)}${c.fee == null ? ' + entry' : ''}</span></div>` : ''}`;
+          <div class="sd-cost-total"><span>Total (${shareLbl}${fh ? ', 🎒 hand bag' : ''})</span><span>${eur(base + fh)}${plus}</span></div>
+          ${fc ? `<div class="sd-cost-total sd-cost-total2"><span>Same, with 🧳 checked bag</span><span>${eur(base + fc)}${plus}</span></div>` : ''}
+          ${h.double != null && h.total != null ? `<div class="sd-cost-total sd-cost-total2 sd-single"><span>👤 Alone in a single room${fh ? ', 🎒 hand bag' : ''}</span><span>${eur(h.total + fee + foodCost + fh)}${plus}</span></div>` : ''}`;
         }
         html += `<div class="sd-cost-opt${h.org ? ' sd-org' : ''}"><div class="sd-cost-opt-h">${head}</div>${body}</div>`;
       });
     } else if (!c.noFlight) {
       html += `<p class="sd-muted">No hotel price yet. Use the Booking.com button below.</p>`;
     }
-    html += `<p class="sd-muted">Checked ${esc(c.checked)}. Totals use the single room. Organiser hotels come from the regulations; other hotels from Booking.com, closest to the playing hall. Food is an estimate (€25/day, €15 with breakfast). ${c.note ? esc(c.note) : ''} Prices change daily — check the live buttons before booking.</p>`;
+    html += `<p class="sd-muted">Checked ${esc(c.checked)}. Main totals use your half of a double room; the single-room total is shown below it. Organiser hotels come from the regulations; other hotels from Booking.com, closest to the playing hall. Food is an estimate (€25/day, €15 with breakfast). ${c.note ? esc(c.note) : ''} Prices change daily — check the live buttons before booking.</p>`;
     html += '</div>';
     return html;
   }
@@ -3898,7 +3903,7 @@ function renderPlanSummary(season, fmt, esc) {
     </div>
     ${warns.length ? `<div class="plan-warns">${warns.map(w => `<div>${w}</div>`).join('')}</div>` : '<div class="plan-ok">✅ No date clashes.</div>'}
     <div class="plan-rows">${rows.join('')}</div>
-    <p class="season-status">Cost = flight with hand bag + cheapest hotel with a price + food estimate + entry fee.${unknown.length ? ' Missing prices: ' + esc(unknown.join('; ')) + '.' : ''}</p>
+    <p class="season-status">Cost = flight with hand bag + your half of a double room (cheapest hotel with a price) + food estimate + entry fee.${unknown.length ? ' Missing prices: ' + esc(unknown.join('; ')) + '.' : ''}</p>
   </div>`;
 }
 
